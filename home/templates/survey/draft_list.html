@@ -1,0 +1,42 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/draft.css' %}">
+  <title>Document</title>
+</head>
+<body>
+   <h1>Qaralama Sorğular</h1>
+  {% if drafts %}
+    <ul>
+      {% for draft in drafts %}
+        <li class="alig">
+          <span style="display: flex;justify-content: center; margin-inline: 10px; margin: 20px 0 ;">
+
+            <h5>Lastname</h5>
+            <h5>Firstname</h5>
+            <h5>Firstname Init </h5>
+            <h5>Email</h5>
+          </span>
+
+          <strong> {{ draft.lastname }}  {{ draft.name }}  {{draft.first_name_init}}  {{draft.email}}</strong>
+          <a href="{% url 'edit_draft' draft.id %}">Edit</a>
+          <a href="{% url 'delete_draft' draft.id %}">Delete</a>
+          <a href="{% url 'survey'%}">Cancel</a>
+          
+       
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No drafts found.</p>
+  {% endif %}
+ 
+</body>
+</html> 
+ {%endblock%}

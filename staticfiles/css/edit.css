@@ -1,0 +1,55 @@
+input , .form-control{
+    margin: 20px 0; 
+}
+.extra{
+    display: flex;
+    align-items: center;
+}
+.rowm{
+
+    width: 120px;
+    height: 45px;
+    background-color: green;
+    color: white;
+    margin-left: 20px;
+
+    border-radius: 16px;
+}
+.linkedin{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+.postf{
+    width: 1072px;
+    display: flex;
+    flex-direction: column;
+}
+.method{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.wise{
+    width: 100px;
+    height: 39px;
+}
+.form-check{
+    padding: 0;
+}
+.submitting{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.legth{
+    margin-left: 30px;
+}
+@media only screen and (max-width:1134px){
+    input, .form-control{
+        width: 100%;
+    }
+    .method{
+        padding: 10px 20px;
+    }
+}

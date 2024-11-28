@@ -1,0 +1,294 @@
+<!-- preview.html -->
+{%load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Preview</title>
+    <link rel="stylesheet" href="{%static 'css/preview.css'%}">
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+
+      .title {
+        font-weight: bold;
+        margin: 0;
+        color: #25a6aa;
+      }
+      @media (min-width: 991px) {
+        .previewFormat {
+          width: 700px;
+        }
+      }
+    </style>
+  </head>
+  <body style="margin: 0">
+    <div id="previewData" class="previewFormat">
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.input1}}</p>
+          <p>{{ form_data.textbox1 }}</p>
+        </div>
+      </div> 
+
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title"> {{survey_title.dropdown1}}</p>
+          <p>{{ form_data.dropdown_1 }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title"> {{survey_title.dropdown2}}</p>
+          <p>{{ form_data.dropdown_2 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title"> {{survey_title.dropdown3}}</p>
+          <p>{{ form_data.dropdown_3 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title"> {{survey_title.dropdown4}}</p>
+          <p>{{ form_data.dropdown_4 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.checkbox1}}</p>
+          <p>{{ form_data.select1 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.input2}}</p>
+          <p>{{ form_data.textbox2 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.checkbox2}}</p>
+          <p>{{ form_data.select2 }}</p>
+        </div>
+      </div>
+      
+      
+      
+    
+      
+      
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.presnterdropdown}}</p>
+          <p>{{ form_data.dropdown_5 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title" style="color:#478C8E">{{survey_title.lastnametitle}}</p>
+          <p>{{ form_data.lastname }}</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.firstnametitle}}</p>
+          <p>{{ form_data.name }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.firstnameInititle}}</p>
+          <p>{{ form_data.first_name_init}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.emailtitle}}</p>
+          <p>{{ form_data.email }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.affiliationtitle}}</p>
+          <p>{{ form_data.affilation }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.citytitle}}</p>
+          <p>{{ form_data.city }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.countrytitle}}</p>
+          <p>{{ form_data.country }}</p>
+        </div>
+      </div>
+
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput1}}</p>
+          <p>{{ form_data.background }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput2}}</p>
+          <p>{{ form_data.method }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput3}}</p>
+          <p>{{ form_data.result }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput4}}</p>
+          <p>{{ form_data.conclusion }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.file1}}</p>
+          <p>{{ form_data.file_1 }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.file2}}</p>
+          <p>{{ form_data.file_2 }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.file3}}</p>
+          <p>{{ form_data.file_3 }}</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.selectdropdown1}}</p>
+          <p>{{ form_data.selectbox_1}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.selectdropdown2}}</p>
+          <p>{{ form_data.selectbox_2 }}</p>
+        </div>
+      </div>
+
+
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.keywordinput}}</p>
+          <p>{{ form_data.keyword_1 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.lastcheckboxtitle1}}</p>
+          <p>{{ form_data.checkbox_1 }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.lastcheckboxtitle2}}</p>
+          <p>{{ form_data.checkbox_2 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.lastcheckboxtitle3}}</p>
+          <p>{{ form_data.checkbox_3 }}</p>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="col-md-12">
+ 
+          <p class="title"><h2>Əlavə aparıcı</h2></p>
+          {% if form_data.additional_locations %}
+          {% for location in form_data.additional_locations %}
+          <h3> <span>Aparıcı:</span> {{ forloop.counter }}</h3>
+          <p> <span>{{survey_title.lastnametitle}}:</span>  {{ location.lastname }}</p>
+          <p><span>{{survey_title.firstnametitle}}:</span> {{ location.name }}</p>
+          <p><span>{{survey_title.firstnameInititle}}:</span> {{ location.first_name_init }}</p>
+          <p><span>{{survey_title.emailtitle}}:</span> {{ location.email }}</p>
+          <p><span>{{survey_title.affiliationtitle}}:</span> {{ location.affilation }}</p>
+          <p><span>{{survey_title.citytitle}}:</span> {{ location.city }}</p>
+          <p><span>{{survey_title.countrytitle}}:</span> {{ location.country }}</p>
+          <p><span>{{survey_title.presnterdropdown}}:</span> {{ location.dropdown_5 }}</p>
+       {% endfor %}
+          {% else %}
+      <p>Əlavə aparıcılar təqdim edilməyib.</p>
+         {% endif %}
+        </div>
+      </div>
+      
+    <div style="text-align: center" class="nmb">
+      <a href="#" id="back">Back</a>
+    </div>
+  </div>
+  <script>
+  const backButton = document.getElementById("back");
+      backButton.addEventListener("click", () => {
+        // Redirect to the previous submit_survey page
+        window.history.back();
+      });
+  </script>
+</body>
+</html>
+
+     
+
+<!-- preview.html
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preview</title>
+</head>
+<body>
+    <h1>Preview</h1>
+
+    <h2>Personal Information</h2>
+    <p>Name: {{ form_data.name }}</p>
+    <p>Lastname: {{ form_data.lastname }}</p>
+    <p>Email: {{ form_data.email }}</p>
+
+    <h2>Main Location</h2>
+    <p>Main City: {{ form_data.maincity }}</p>
+    <p>Main Country: {{ form_data.maincountry }}</p>
+
+    <h2>Additional Locations</h2>
+    {% if form_data.additional_locations %}
+        {% for location in form_data.additional_locations %}
+            <h3>Location {{ forloop.counter }}</h3>
+            <p>City: {{ location.city }}</p>
+            <p>Country: {{ location.country }}</p>
+            <p>Dropdown Option: {{ location.dropdown1 }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No additional locations submitted.</p>
+    {% endif %}
+ 
+</body>
+</html>
+ -->

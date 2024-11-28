@@ -1,0 +1,394 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{%static 'css/edit.css' %}">
+</head>
+<body>
+
+  <div class="method">
+
+  <form method="POST" action="{% url 'edit_draft' draft.id %}" enctype="multipart/form-data" class="postf">
+    {% csrf_token %}
+    <div class="form-group">
+      <div class="form-group">
+        <label for="textbox1">Text Box 1</label>
+        <input type="text" class="form-control" id="textbox1" name="textbox1" value="{{ draft.textbox1 }}" required>
+      </div>
+      <label for="dropdown1">Dropdown 1</label>
+      <select class="form-control" id="dropdown1" name="dropdown1" required>
+        <option value="">Select an option</option>
+        {% for option in option1 %}
+          {% if draft.dropdown_1 == option %}
+            <option value="{{ option.id }}" selected>{{ option.option }}</option>
+          {% else %}
+            <option value="{{ option.id }}">{{ option.option }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dropdown2">Dropdown 2</label>
+      <select class="form-control" id="dropdown2" name="dropdown2" required>
+        <option value="">Select an option</option>
+        {% for option in option2 %}
+          {% if draft.dropdown_2 == option %}
+            <option value="{{ option.id }}" selected>{{ option.option }}</option>
+          {% else %}
+            <option value="{{ option.id }}">{{ option.option }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dropdown3">Dropdown 3</label>
+      <select class="form-control" id="dropdown3" name="dropdown3" required>
+        <option value="">Select an option</option>
+        {% for option in option3 %}
+          {% if draft.dropdown_3 == option %}
+            <option value="{{ option.id }}" selected>{{ option.option }}</option>
+          {% else %}
+            <option value="{{ option.id }}">{{ option.option }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dropdown4">Dropdown 4</label>
+      <select class="form-control" id="dropdown4" name="dropdown4" required>
+        <option value="">Select an option</option>
+        {% for option in option4 %}
+          {% if draft.dropdown_4 == option %}
+            <option value="{{ option.id }}" selected>{{ option.option }}</option>
+          {% else %}
+            <option value="{{ option.id }}">{{ option.option }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+  
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="select1" name="select1" {% if draft.select1 %}checked{% endif %}>
+      <label class="form-check-label" for="select1">Checkbox 1</label>
+    </div>
+    <div class="form-group">
+      <label for="textbox2">Text Box 2</label>
+      <input type="text" class="form-control" id="textbox2" name="textbox2" value="{{ draft.textbox2 }}" required>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="select2" name="select2" {% if draft.select2 %}checked{% endif %}>
+      <label class="form-check-label" for="select2">Checkbox 2</label>
+    </div>
+    <div class="form-group">
+      <label for="dropdown5">Dropdown 5</label>
+      <select class="form-control" id="dropdown5" name="dropdown5_id[]" required>
+       
+        {% for option in option5 %}
+          {% if draft.dropdown_5 == option %}
+            <option value="{{ option.id }}" selected>{{ option.option }}</option>
+          {% else %}
+            <option value="{{ option.id }}">{{ option.option }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="lastname">Lastname</label>
+      <input type="text" class="form-control" id="lastname" name="lastname[]" value="{{ draft.lastname }}" required>
+    </div>
+    <div class="form-group">
+      <label for="firstname">Firstname</label>
+      <input type="text" class="form-control" id="firstname" name="firstname[]" value="{{ draft.name }}" required>
+    </div>
+    <div class="form-group">
+      <label for="firstname_init">Firstname Initial</label>
+      <input type="text" class="form-control" id="firstname_init" name="firstname_init[]" value="{{ draft.first_name_init }}" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email[]" value="{{ draft.email }}" required>
+    </div>
+    <div class="form-group">
+      <label for="affiliation">Affiliation</label>
+      <input type="text" class="form-control" id="affiliation" name="affiliation[]" value="{{ draft.affilation }}" required>
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" name="city[]" value="{{ draft.city }}" required>
+    </div>
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" class="form-control" id="country" name="country[]" value="{{ draft.country }}" required>
+    </div>
+    <div id="additionalRows"></div>
+    <button type="button" class="btn btn-primary rowm wise" onclick="addRow()">Add Row</button>
+  
+    <table class="table" id="myTable" {% if draft.locations.all %}style="display:table"{% else %}style="display:none"{% endif %}>
+      <thead>
+        <tr>
+          <th>Dropdown 5</th>
+          <th>Lastname</th>
+          <th>Firstname</th>
+          <th>Firstname Initial</th>
+          <th>Email</th>
+          <th>Affiliation</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="myTableBody">
+        {% for location in draft.locations.all %}
+        <tr>
+          <td>{{ location.dropdown5.option }}</td>
+          <td>{{ location.lastname }}</td>
+          <td>{{ location.firstname }}</td>
+          <td>{{ location.firstname_init }}</td>
+          <td>{{ location.email }}</td>
+          <td>{{ location.affiliation }}</td>
+          <td>{{ location.city }}</td>
+          <td>{{ location.country }}</td>
+          <td>
+            <button type="button" class="btn btn-danger" onclick="deleteRow(this)">Delete</button>
+            <input type="hidden" name="dropdown5_id[]" value="{{ location.dropdown5.id }}">
+            <input type="hidden" name="location_id[]" value="{{ location.id }}">
+            <input type="hidden" name="lastname[]" value="{{ location.lastname }}">
+            <input type="hidden" name="firstname[]" value="{{ location.firstname }}">
+            <input type="hidden" name="firstname_init[]" value="{{ location.firstname_init }}">
+            <input type="hidden" name="email[]" value="{{ location.email }}">
+            <input type="hidden" name="affiliation[]" value="{{ location.affiliation }}">
+            <input type="hidden" name="city[]" value="{{ location.city }}">
+            <input type="hidden" name="country[]" value="{{ location.country }}">
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    
+    <div class="form-group extra">
+      <label for="background">Background</label>
+      <textarea class="form-control" id="background" name="background" rows="3" required>{{ draft.background }}</textarea>
+    </div>
+    <div class="form-group extra">
+      <label for="method">Method</label>
+      <textarea class="form-control" id="method" name="method" rows="3" required>{{ draft.method }}</textarea>
+    </div>
+    <div class="form-group extra">
+      <label for="result">Result</label>
+      <textarea class="form-control" id="result" name="result" rows="3" required>{{ draft.result }}</textarea>
+    </div>
+    <div class="form-group extra">
+      <label for="conclusion">Conclusion</label>
+      <textarea class="form-control" id="conclusion" name="conclusion" rows="3" required>{{ draft.conclusion }}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="file1">File 1*</label>
+      <input type="file" class="form-control" id="file1" name="file1" required>
+    </div>
+    <div class="form-group">
+      <label for="file2">File 2</label>
+      <input type="file" class="form-control" id="file2" name="file2">
+    </div>
+    <div class="form-group">
+      <label for="file3">File 3</label>
+      <input type="file" class="form-control" id="file3" name="file3">
+    </div>
+  
+  
+    <div class="form-group">
+      <label for="dropdown6">Select Box 1</label>
+      <select class="form-control" id="dropdown6" name="dropdown6" required>
+        {% for option in selectoption1 %}
+          {% if draft.selectbox_1 == option %}
+            <option value="{{ option.id }}" selected>{{ option.option }}</option>
+          {% else %}
+            <option value="{{ option.id }}">{{ option.option }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dropdown7">Select Box 2</label>
+      <select class="form-control" id="dropdown7" name="dropdown7" required>
+      
+        {% for option in selectoption2 %}
+          {% if draft.selectbox_2 == option %}
+            <option value="{{ option.id }}" selected>{{ option.option }}</option>
+          {% else %}
+            <option value="{{ option.id }}">{{ option.option }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+   
+    <div class="form-group">
+      <label for="keyword_1">Keyword 1</label>
+      <input type="text" class="form-control" id="keyword_1" name="keyword_1" value="{{ draft.keyword_1 }}" required>
+    </div>
+    <div class="form-group form-check legth">
+      <input type="checkbox" class="form-check-input" id="checkbox1" name="checkbox_1" {% if draft.checkbox_1 %}checked{% endif %}>
+      <label class="form-check-label" for="checkbox1">Checkbox 1</label>
+    </div>
+    <div class="form-group form-check legth">
+      <input type="checkbox" class="form-check-input" id="checkbox2" name="checkbox_2" {% if draft.checkbox_2 %}checked{% endif %}>
+      <label class="form-check-label" for="checkbox2">Checkbox 2</label>
+    </div>
+    <div class="form-group form-check legth">
+      <input type="checkbox" class="form-check-input" id="checkbox3" name="checkbox_3" {% if draft.checkbox_3 %}checked{% endif %}>
+      <label class="form-check-label" for="checkbox3">Checkbox 3</label>
+    </div>
+   
+   
+    <span class="submitting">
+    <button type="submit" name="action" value="draft" class="btn btn-primary rowm">Save Draft</button>
+    <button type="submit" class="rowm" formaction="{% url 'survey' %}">Submit</button>
+    <a href="{% url 'draft_list'%}" class="linkedin">Cancel</a>
+    </span>
+  </form>
+</div>
+   
+  <script>
+    function addRow() {
+      const cityInput = document.getElementById("city");
+      const countryInput = document.getElementById("country");
+      const lastnameInput = document.getElementById("lastname");
+      const firstnameInput = document.getElementById("firstname");
+      const firstnameInitInput = document.getElementById("firstname_init");
+      const emailInput = document.getElementById("email");
+      const affiliationInput = document.getElementById("affiliation");
+      const dropdown5Input = document.getElementById("dropdown5");
+  
+      const city = cityInput.value;
+      const country = countryInput.value;
+      const lastname = lastnameInput.value;
+      const firstname = firstnameInput.value;
+      const firstnameInit = firstnameInitInput.value;
+      const email = emailInput.value;
+      const affiliation = affiliationInput.value;
+      const dropdown5Option = dropdown5Input.value;
+      const dropdown5Text = dropdown5Input.options[dropdown5Input.selectedIndex].text;
+  
+      if (city === '' || country === '' || lastname === '' || firstname === '' || firstnameInit === '' || email === '' || affiliation === '' || dropdown5Option === '') {
+        alert("Please fill in all the required fields.");
+        return;
+      }
+  
+      const tableBody = document.getElementById("myTableBody");
+      const newRow = tableBody.insertRow();
+  
+      const lastnameCell = newRow.insertCell();
+      lastnameCell.textContent = lastname;
+  
+      const firstnameCell = newRow.insertCell();
+      firstnameCell.textContent = firstname;
+  
+      const firstnameInitCell = newRow.insertCell();
+      firstnameInitCell.textContent = firstnameInit;
+  
+      const emailCell = newRow.insertCell();
+      emailCell.textContent = email;
+  
+      const affiliationCell = newRow.insertCell();
+      affiliationCell.textContent = affiliation;
+  
+      const cityCell = newRow.insertCell();
+      cityCell.textContent = city;
+  
+      const countryCell = newRow.insertCell();
+      countryCell.textContent = country;
+  
+      const dropdown5Cell = newRow.insertCell();
+      dropdown5Cell.textContent = dropdown5Text;
+  
+      const actionCell = newRow.insertCell();
+      const deleteButton = document.createElement("button");
+      deleteButton.className = "btn btn-danger";
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", function () {
+        const currentRow = this.parentNode.parentNode;
+        tableBody.removeChild(currentRow);
+        if (tableBody.rows.length === 0) {
+          document.getElementById("myTable").style.display = "none";
+        }
+      });
+  
+      actionCell.appendChild(deleteButton);
+  
+      // Create hidden inputs to submit table values
+      const lastnameInputHidden = document.createElement("input");
+      lastnameInputHidden.type = "hidden";
+      lastnameInputHidden.name = "lastname[]";
+      lastnameInputHidden.value = lastname;
+      newRow.appendChild(lastnameInputHidden);
+  
+      const firstnameInputHidden = document.createElement("input");
+      firstnameInputHidden.type = "hidden";
+      firstnameInputHidden.name = "firstname[]";
+      firstnameInputHidden.value = firstname;
+      newRow.appendChild(firstnameInputHidden);
+  
+      const firstnameInitInputHidden = document.createElement("input");
+      firstnameInitInputHidden.type = "hidden";
+      firstnameInitInputHidden.name = "firstname_init[]";
+      firstnameInitInputHidden.value = firstnameInit;
+      newRow.appendChild(firstnameInitInputHidden);
+  
+      const emailInputHidden = document.createElement("input");
+      emailInputHidden.type = "hidden";
+      emailInputHidden.name = "email[]";
+      emailInputHidden.value = email;
+      newRow.appendChild(emailInputHidden);
+  
+      const affiliationInputHidden = document.createElement("input");
+      affiliationInputHidden.type = "hidden";
+      affiliationInputHidden.name = "affiliation[]";
+      affiliationInputHidden.value = affiliation;
+      newRow.appendChild(affiliationInputHidden);
+  
+      const cityInputHidden = document.createElement("input");
+      cityInputHidden.type = "hidden";
+      cityInputHidden.name = "city[]";
+      cityInputHidden.value = city;
+      newRow.appendChild(cityInputHidden);
+  
+      const countryInputHidden = document.createElement("input");
+      countryInputHidden.type = "hidden";
+      countryInputHidden.name = "country[]";
+      countryInputHidden.value = country;
+      newRow.appendChild(countryInputHidden);
+  
+      const dropdown5InputHidden = document.createElement("input");
+      dropdown5InputHidden.type = "hidden";
+      dropdown5InputHidden.name = "dropdown5[]";
+      dropdown5InputHidden.value = dropdown5Option;
+      newRow.appendChild(dropdown5InputHidden);
+  
+      // Show the table
+      document.getElementById("myTable").style.display = "table";
+    }
+  
+    function deleteRow(button) {
+      const tableBody = document.getElementById("myTableBody");
+      const currentRow = button.parentNode.parentNode;
+      tableBody.removeChild(currentRow);
+      if (tableBody.rows.length === 0) {
+        document.getElementById("myTable").style.display = "none";
+      }
+    }
+  </script>
+  
+  
+  
+   
+  
+   
+</body>
+</html>
+{% endblock %}
+

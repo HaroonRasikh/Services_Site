@@ -1,0 +1,381 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.word{
+    display: flex;
+    align-items: baseline;
+    width: 1072px;
+    flex-direction: row;
+}
+.word > a,i{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 12px;
+}
+.pastg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.pastg hr{
+    border: 1px solid rgba(157, 158, 159, 0.16);
+    width: 1072px;
+}
+.spsb{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.arter{
+    display: flex;
+    justify-content: center;
+}
+.spsb h1{
+    font-family: 'Montserrat', sans-serif;;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+.fa-file-pdf:before{
+    margin-inline-start: 12px;
+    width: 12px;
+    height: 20px;
+}
+.spsb a{
+    text-decoration: none;
+    color: black;
+}
+.down{
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+.artik{
+    width: 1072px;
+    display: flex;
+    justify-content: center;
+    background-color:#1F4586 ;
+}
+.artik h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 32px;
+}
+.artik span{
+    width: 885px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.artik span hr{
+    width: 885px;
+    height: 1px;
+    color: aqua;
+}
+.artik .beynel{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 540;
+    font-size: 22.9px;
+    line-height: 48px;
+}
+.artik .beynel span{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 32px;
+    line-height: 48px;
+}
+.artik .beyn{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 48px;
+}
+.artik .beyn span{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 32px;
+    line-height: 48px;
+}
+.artik .beynrr{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+}
+.artik .beynrr span{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 32px;
+    line-height: 48px;
+}
+.rzza{
+    width: 1072px;
+    display: flex;
+    justify-content: center;
+    background-color:#1F4586;
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 44px;
+}
+
+
+.dordkunc{
+    width: 100%;
+background: #82BD3F;
+border-radius: 8px;
+}
+.bitish{
+    display: flex;
+    justify-content: center;
+}
+.bitish span{
+    width: 1072px;
+    background-color:#1F4586 ;
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.rrrg{
+    padding: 40px 0 20px 90px;
+}
+.bitish article{
+    display: flex;
+    margin-top: 34px;
+}
+.retigj{
+    display: flex;
+    flex-direction: column;
+    
+}
+.retrrikk{
+    width: 783px;
+height: 120px;
+
+background: #82BD3F;
+border-radius: 8px;
+}
+.random{
+    width: 152px;
+    height: 152px;
+    border: 4px solid #FFFFFF;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-right: -48px;
+    z-index: 99;
+}
+.greenandphoto{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.tibb{
+    padding-left: 65px;
+    font-size: 24px;
+    margin-top: 26px;
+}
+.tibbr{
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 12px;
+    padding-left: 65px;
+}
+.saatcik{
+    display: flex;
+    height: 58px;
+    margin-top: -10.5px;
+}
+.saatcik p{
+    margin-top: -5.5px;
+}
+.saatcik h3{
+    display: flex;
+    align-items: baseline;
+    font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+}
+.moder{
+    font-family: 'IBM Plex Sans',sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+}
+.modern{
+    font-family: 'IBM Plex Sans',sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+margin-top: 41.5px;
+}
+
+.anorma{
+    width: 885px;
+}
+.anorma span{
+    display: flex;
+    margin-top: -9px;
+    width: 100%;
+}
+.yumru{
+    color: white;
+    width: 1px;
+    border: 1px white;
+    background: white;
+    margin: 0px 39px 0 23.9px;
+}
+.yumrul{
+    color: white;
+    width: 1px;
+    border: 1px white;
+    background: white;
+    margin: 9px 39px 0 23.9px;
+}
+.eer{
+    margin: 40px 0 34px 0;
+    font-family: 'Montserrat',sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 48px;
+}
+.umru{
+    width: 12px;
+height: 12px;
+border-radius: 50px;
+margin-left: -5px;
+background: #FFFFFF;
+margin-top: 9px;
+}
+.umrul{
+    width: 12px;
+height: 12px;
+border-radius: 50px;
+margin-left: -5px;
+background: #FFFFFF;
+}
+.lame{
+    
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
+.laner{
+    
+font-family: 'Roboto' ,sans-serif;
+    
+font-style: normal;
+    
+font-weight: 500;
+    
+font-size: 19px;
+    
+line-height: 24px;
+    
+margin-top: 4px;
+    
+width: 135px;
+}
+.lanert{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    width: 191px;
+    font-size: 24px;
+}
+.lamert{
+   
+font-family: 'IBM Plex Sans',sans-serif;
+   
+font-style: normal;
+   
+font-weight: 700;
+   
+font-size: 23px;
+   
+
+}
+
+.anorma h4{
+    width: 590px;
+    FONT-SIZE: 23PX;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width:1130px){
+    .artik, .rzza{
+        width: 100%;
+    }
+    .artik span{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .artik h1{
+
+        font-size: 20px;
+        margin: 20px;
+    }
+    .pastg{
+        display: none;
+    }
+    .spsb{
+        width: 100%;
+        padding: 15px 10px;
+    }
+    .anorma{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .greenandphoto{
+        width: 100%;
+    padding: 0 20px;
+    }
+    .retrrikk{
+        width: 100%;
+        height: 100%;
+    }
+    .tibb, .tibbr{
+        font-size: 17px;
+    }
+    .artik span hr{
+        width: 100%;
+    }
+    .lanert, .lamert{
+        font-size: 12px;
+    }
+    .anorma h4 {
+        font-size: 16px;
+    }
+}

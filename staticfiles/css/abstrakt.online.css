@@ -1,0 +1,256 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+ 
+  .words{
+    display: flex;
+    align-items: baseline;
+    width: 1072px;
+    flex-direction: row;
+}
+.words > a, i {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.lastg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+}
+.anetr{
+    border: 1px solid rgba(157, 158, 159, 0.16);
+    width: 1072px;
+}
+.heber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.heber .asd{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2E3131;
+}
+.heber .xbzibit{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2E3131;
+    padding-right: 15rem;
+}
+.heber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.heber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.ich{
+    display: flex;
+    justify-content: center;
+}
+.buttonss{
+    display: flex;
+    justify-content: center;
+
+}
+
+.pasterg input{
+    width: 704px;
+height: 48px;
+border: 1px solid #E4E8EE;
+border-radius: 4px;
+padding: 10px;
+margin: 10px 0;
+}
+.pasterg textarea{
+    width: 704px;
+height: 192px;
+border: 1px solid #E4E8EE;
+border-radius: 4px;
+padding: 10px;
+margin: 10px 0;
+}
+.gondermek{
+    width: 164px;
+height: 52px;
+background: #1F4586;
+border: 1px solid #1F4586;
+border-radius: 4px;
+color: white;
+margin-top: 20px;
+}
+.allangs{
+    display: flex;
+    justify-content: center;
+    width: 1072px;
+}
+.centeri{
+    display: flex;
+    justify-content: center;
+}
+.resimler{
+    display: flex;
+    margin: 25px 0  0 32px;
+}
+.getto{
+    display: flex;
+    margin: 57px 0  0 32px;
+}
+.resimler span{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+.resimler img{
+    width: 72px;
+    height: 72px;
+}
+.resimler h1{
+    font-family: 'Montserrat' sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16.5px;
+line-height: 24px;
+color: rgba(46, 49, 49, 0.78);
+margin-bottom: 4px;
+}
+.resimler p{
+    opacity: 0.7;
+}
+.welldone{
+    margin-top: 3px;
+    margin-left: 32px;
+}
+.anketolog{
+    width: 336px;
+    height: 321px;
+    background: #1F4586;
+    border-radius: 4px;
+    margin-left: 2rem;
+    margin-top: 13px;
+    padding: 75px 25px;
+}
+.akero{
+    display: flex;
+    align-items: center;
+}
+.yumrular{
+    width: 48px;
+    height: 48px;
+    background-color: #82BD3F;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+}
+.yumrular span{
+    width: 0%;
+    margin-left: 20px;
+}
+.anketolog hr{
+    color: white;
+}
+.anketolog a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Work Sans', sans-serif;
+}
+.samka{
+    display: flex;
+    text-decoration: none;
+}
+.samka p{
+    display: flex;
+    text-decoration: none;
+    opacity: 0.7;
+    color: black;
+}
+.uzun{
+    width: 336px;
+    height: 104px;
+    background: #1F4586;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .balaca{
+        width: 75px;
+        height: 71.9px;
+        background: #1F4586;
+        transform: rotate(46deg);
+        margin-left: -37.6px;
+        margin-top: 16px;
+    }
+    .fiqurcc{
+    display:flex;  
+    margin: 24px 0;
+    }
+    .uzun p{
+font-family: 'Montserrat' sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 52px;
+text-align: center;
+color: #FFFFFF;
+margin: 7px;
+    }
+
+    .buttonss h4{
+        margin: 21px 0;
+    }
+.uzun a{
+    text-decoration: none;
+}
+@media only screen and (max-width:1134px){
+    .heber .xbzibit, .lastg{
+        display: none;
+    }
+    .allangs{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 20px;
+    }
+    .metinler{
+        width: 100%;
+        margin: 10px 20px;
+    }
+    .cebert{
+        width: 100%;
+
+        flex-wrap: nowrap;
+    }
+    .getto, .pasterg, .welldone, .centeri{
+
+padding: 0 20px;
+
+}
+    .heber{
+        text-align: center;
+        display: contents;
+    }
+    .getto{
+        margin: 57px 0  0 20px;
+    }
+    .anketolog{margin-top: 45px;}
+   
+}

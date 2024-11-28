@@ -1,0 +1,160 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+
+.word{
+    display: flex;
+    align-items: baseline;
+    width: 1072px;
+    flex-direction: row;
+}
+.word > a,i{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 12px;
+}
+.pastg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+hr{
+    border: 1px solid rgba(157, 158, 159, 0.16);
+    width: 1072px;
+}
+.spsb{
+    width: 1072px;
+}
+.arter{
+    display: flex;
+    justify-content: center;
+}
+.spsb h1{
+    font-family: 'Montserrat', sans-serif;;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.retrika{
+    display: flex;
+    justify-content: center;
+}
+.divsg{
+    display: flex;
+    justify-content: center;
+    width: 1072px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    grid-gap: 0 32px;
+}
+.allteam{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 336px;
+    flex-wrap: wrap;
+}
+.public{
+    width: 336px;
+    height: 184px;
+    background: #1F4586;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.rest{
+    width: 336px;
+    height: 184px;
+    background: #82BD3F;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.gride{
+    width: 160px;
+    height: 160px;
+    border: 4px solid #FFFFFF;
+    border-radius: 100%;
+    margin-top: -105px;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+}
+.publika{
+    display: flex;
+    flex-direction: column;
+    width: 336px;
+}
+.socials a{
+    margin-inline: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 100%;
+    height: 28px;
+    text-decoration: none;
+}
+
+.socials i{
+    color: #58626880;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin: 9px;
+}
+.publika h1{
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: rgba(28, 29, 29, 0.87);
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+.publika p{
+    font-family: 'Roboto' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(46, 49, 49, 0.87);
+    opacity: 60%;
+    margin-top: 3px;
+    padding: 0;
+}
+.socials .fa-facebook-f{
+    padding: 0 1px;
+}
+
+
+select{
+    word-wrap: normal;
+    border: none;
+    background: #1F4586;
+    color: white;
+}

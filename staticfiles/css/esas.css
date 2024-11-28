@@ -1,0 +1,771 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+
+  
+
+.shekil{
+    width: 100%;
+    height: 100% ;
+    z-index: -1;
+}
+.w-100 {
+    width: 100%!important;
+    position: relative;
+    z-index: -1;
+}
+
+.imgler{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 56px;
+}
+.cards{
+    width: 1072px;
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -95px;
+}
+.cardlar{
+    display: flex;
+
+    padding: 0;
+    justify-content: space-between;
+}
+.minipng{
+    width: 128px;
+    height: 75px;
+    display: flex;
+    align-self: center;
+    margin-bottom: 16px;
+}
+.elektr{
+    width: 152px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: -20px;
+}
+.desc{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.devet{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #1F4586;
+}
+.point{
+    display: flex;
+    flex-direction: column;
+    width: 612px;
+}
+.estab{
+    width: 612px;
+    color: #2E3131DE;
+    opacity: 87%;
+    font-family: 'Montserrat', sans-serif;
+}
+.epinr{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.launch-time{
+    display: flex;
+    margin-top: 53px;
+    flex-direction: row;
+}
+.launch-time div{
+    flex-basis: 100px;
+    padding: 5px;
+}
+.launch-time div h6{
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 87%;
+}
+.launch-time div p{
+    text-align: center;
+    box-shadow: 0px 3px rgb(218 218 218);
+    width: 92px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #1F4586;
+    font-family: 'Montserrat', sans-serif;
+}
+.tarixler{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.09rem;
+    margin-top: 32px;
+    color: #1F4586;
+}
+.kvd{
+    height: 136px;
+    width: 151px;
+    box-shadow: 0px 3px rgb(218 218 218);
+    margin-bottom: 34px;
+}
+.all{
+    display: flex;
+    flex-direction: row;
+}
+.sozler{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.saybu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 136px;
+    margin-left: 33px;
+}
+.saybu p{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2E3131;
+}
+.saybu h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1F4586;
+}
+.kvd p{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 780;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #1F4586;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
+.ogb{
+    color:#82BD3F !important;
+}
+.kvd a{
+    text-decoration: none;
+}
+.saybu a{
+    text-decoration: none;
+}
+.xheber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.ortateref{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    width: 1072px;
+    flex-direction: column;
+}
+.xheber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F4586;
+}
+.xheber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.xheber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.cardlarBolmesi img{
+    height: 274px;
+    width: 336px;
+}
+.allofthis{
+    display: flex;
+    justify-content: center
+}
+.cardlarBolmesi{
+    display: flex;
+    grid-gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    width: 1072px;
+}
+.digital p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* height: 48px; */
+    width: 336px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 16px;
+}
+.blue{
+    height: 4px;
+    width: 168px;
+    /* left: 0px; */
+    /* top: 270px; */
+    border-radius: 0px;
+    background-color: #1F4586;
+}
+.gren{
+    height: 4px;
+    width: 168px;
+    left: 0px;
+    top: 270px;
+    border-radius: 0px;
+    background-color: #82BD3F;
+}
+.xettler{
+    display: flex;
+}
+.digital h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+.digital i{
+    margin-inline: 16px 0;
+}
+.digital a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.first{
+    width: 520px;
+    /* height: 276px; */
+    background: #1F4586;
+    border-radius: 8px;
+    /* margin-right: 36px; */
+    display: flex;
+    flex-direction: column;
+    min-height: 276px;
+}
+.second{
+    width: 520px;
+    /* height: 276px; */
+    background: #82BD3F;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 276px;
+}
+.yet{
+    display:flex;
+    width: 1072px;
+    flex-wrap: wrap;
+    grid-gap: 32px 32px;
+}
+.twodiv{
+    margin-top: 72px;
+    display: flex;
+    justify-content: center;
+}
+.first h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin: 46px 0 0 24px;
+    font-weight: 750;
+}
+.first p{
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFFDE;
+    opacity: 87%;
+    margin: 16px 24px 46px 24px;
+}
+.second h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin: 46px 0 0 24px;
+    font-weight: 750;
+}
+.second p{
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFFDE;
+    opacity: 87%;
+    margin: 16px 24px 46px 24px;
+}
+
+.firstc{
+    width: 520px;
+    background: #1F4586;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 276px;
+}
+.carding{
+    display: flex;
+    justify-content: center;
+}
+.secondc{
+    width: 520px;
+
+    background: #82BD3F;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 276px;
+}
+.yer{
+    flex-direction: row-reverse;
+    display: flex;
+    width: 1072px;
+    flex-wrap: wrap;
+    grid-gap: 32px 32px;
+}
+.twoliv{
+    margin-top: 72px;
+    display: flex;
+    justify-content: center;
+}
+.firstc h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin: 46px 0 0 24px;
+    font-weight: 750;
+}
+.firstc p{
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFFDE;
+    opacity: 87%;
+    margin: 16px 24px 46px 24px;
+}
+.secondc h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin: 46px 0 0 24px;
+    font-weight: 750;
+}
+.secondc p{
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFFDE;
+    opacity: 87%;
+    margin: 16px 24px 46px 24px;
+}
+
+
+.heber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.heber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F4586;
+}
+.heber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.heber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.gangom{
+    display: flex;
+    justify-content: center;
+    margin-top: 72px;
+}
+.sekillertoplu div{
+    width: 336px;
+    height: 299px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 100px rgba(223, 223, 223, 0.16);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sekillertoplu img{
+    width: 111px;
+    height: 131px;
+    margin-top: 40px;
+    display: flex;
+    align-self: center;
+}
+.sekillertoplu{
+    display: flex;
+    grid-gap: 32px;
+    margin-top: 32px;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1072px;
+}
+.sekillertoplu p{
+    text-align: center;
+    margin: 16px 14px 0 14px;
+    color: rgba(46, 49, 49, 0.6);
+    opacity: 85%;
+}
+.btnm{
+    width: 164px;
+    height: 52px;
+    background: #1F4586;
+    border: 1px solid #1F4586;
+    border-radius: 4px;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnm:hover{
+    background-color: #2b5192;
+}
+.axiri{
+    display: flex;
+    justify-content: center;
+    margin-top: 72px;
+    flex-direction: column;
+    align-items: center;
+}
+.axirinci{
+    width: 1072px;
+    display: flex;
+    justify-content: flex-start;
+}
+.axiri h1{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 780;
+    font-size: 32px;
+    line-height: 48px;
+    color: #1F4586;
+}
+.wrapper{
+    width: 1072px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 33px;
+}
+.meshgul{
+    height: 100px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.slidet{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    animation: slideshow 10s linear infinite;
+}
+.slidet img{
+    height: 78%;
+    padding: 0 30px 0 30px;
+}
+@keyframes slideshow {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.meshgul::before
+.meshgul::after{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, white 0% rgba(255,255,255,0) 100%);
+    z-index: 2;
+}
+.meshgul::before{
+    left: 0;
+    top: 0;
+}
+.meshgul::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ('180deg');
+}
+
+
+.dropbt {
+    background-color: #1F4586;
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding-left: 0;
+    margin-right: 15px;
+  }
+  
+  .dropdow {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-conten {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-conten a {
+    color: black;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    width: 220px;
+  }
+  
+  .dropdown-conten a:hover {
+    background-color:#1F4586; 
+    color: #FFFFFF;
+}
+  
+  .dropdow:hover .dropdown-conten {
+    display: block;
+    margin-top: 15px;
+  }
+  
+  .dropdow:hover .dropbt {
+    background-color: #1F4586;
+  } 
+
+  .ekvator{
+    background-size: 100%;
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-top: -385px;
+}
+.tehsil{
+    width: 520px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    color: #1F4586;
+}
+.basliqlar{
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+}
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: #183464;
+    border-color: var(--bs-btn-hover-border-color);
+}
+.linkedink{
+    width: 164px;
+    height: 52px;
+    background: #1F4586;
+    border: 1px solid #1F4586;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orta{
+    width: 1072px;
+}
+.millet{
+    width: 339px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 2px;
+}
+.dropdownr img{
+    width: 27px;
+height: 16px;
+margin-right: 15px;
+margin-bottom: 2px;
+}
+.irt{
+    color: white;
+    margin-left: 20px;
+}
+.all-items{
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width: 1131px){
+    .cards{
+        flex-wrap: wrap;
+        height: 100%;
+        margin: 0;
+    }
+    .wrapper{
+        width:100%;
+    }
+    .desc{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .desc p{
+        width: 100%;
+    }
+    .devet{
+        text-align: center;
+    }
+    .point{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .cardlarBolmesi{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 0 14px;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    }
+    .xheber{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .heber{
+        width: 100%;
+        padding: 0 20px;
+        align-items: self-end;
+    }
+    .sekillertoplu{
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        padding: 0 14px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+}
+@media only screen and (max-width:700px){
+    .meshgul img
+    {
+    height: 42px;
+    }
+}
+@media only screen and (max-width: 1130px){
+    .ekvator{
+        margin-top: 0;
+        height: 211px;
+        justify-content: center;
+    }
+    .orta {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        text-align: -webkit-center;
+    }
+    .basliqlar{
+        height: 0;
+    }
+    .all{
+        width: 100%;
+    }
+    .allofthis{
+        width: 100%;
+    }
+    .launch-time{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 0 32px;
+        /* margin: 0 10px; */
+    }
+    .axirinci{
+        text-align: center;
+        width: 100%;
+        display: contents;
+    }
+    .tehsil{
+        width: 99%;
+        font-size: 50px;
+        text-align: center;
+        /* margin: 10px; */
+        font-size: 25px
+    }
+    .basliqlar p{
+        text-align: center;
+    }
+    .yer, .yet{
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .linkedink{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+}

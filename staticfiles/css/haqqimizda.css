@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+
+.words{
+    display: flex;
+    align-items: baseline;
+    width: 1072px;
+    flex-direction: row;
+    margin-top: 12px;
+}
+.words > a,i{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.lastg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+hr{
+    border: 1px solid rgba(157, 158, 159, 0.16);
+    width: 1072px;
+}
+.sps{
+    width: 1072px;
+}
+.art{
+    display: flex;
+    justify-content: center;
+}
+.sps h1{
+    font-family: 'Montserrat', sans-serif;;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+.jpgss img{
+    width: 428px;
+    height: 376px;
+    border-radius: 10px;
+    margin-right: 32px;
+}
+.pourter{
+    width: 1072px;
+    display: flex;
+    margin-top: 24px;
+}
+.petro{
+    display: flex;
+    justify-content: center;
+}
+.paragraf h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.divs{
+    display: flex;
+    flex-direction: column;
+    width: 576px;
+}
+.blue{
+    width: 16px;
+    height: 16px;
+    background: #1F4586;
+    border-radius: 50px;
+}
+.diffre{
+    width: 16px;
+    height: 16px;
+    background: #82BD3F;
+    border-radius: 50px;
+}
+.divs > .blue, .diffre, p{
+    display: flex;
+    align-items: baseline;
+}
+.lorem{
+    display: flex;
+}
+.divler{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.divs p{
+    margin: 12px 0 0 20px;
+}
+.firist{
+    width: 520px;
+    height: 184px;
+    background: #1F4586;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.secind{
+    width: 520px;
+    height: 184px;
+    background: #82BD3F;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.like{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 146px;
+    width: 1072px;
+    flex-wrap: wrap;
+    grid-gap: 71px 0;
+}
+.fbii{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 0 32px;
+}
+.comment{
+    display: flex;
+    /* width: 1072px; */
+    justify-content: space-between;
+    grid-gap: 0 16px;
+    /* width: 100%; */
+}
+.king{
+    width: 160px;
+    height: 160px;
+    border: 4px solid #FFFFFF;
+    border-radius: 100%;
+    margin-top: -70px;
+}
+.ling{
+    width: 160px;
+    height: 160px;
+    border: 4px solid #FFFFFF;
+    border-radius: 100%;
+    margin-top: -70px;
+}
+.desk{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desk h6{
+    margin-top: 12px;
+    text-align: center;
+    width: 400px;
+}
+
+
+@media only screen and (max-width: 1131px){
+    .pourter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        grid-gap: 38px 0;
+        width: 100%;
+    }
+    .lorem{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .divs > .blue, .diffre, p{
+        font-size: 12px;
+    }
+    .like{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0 20px;
+        grid-gap: 30px 0;
+    }
+    .desk{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1370px){
+    .lastg{
+        display: none;
+    }
+    .sps h1{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .jpgss img{
+        width: 100%;
+        height: 100%;
+    }
+    .firist{
+        padding: 0 20px;
+        width: 100%;
+    }
+    .secind{
+        padding: 0 20px;
+        width: 100%;
+    }
+    .paragraf{
+        width: 100%;
+    }
+}

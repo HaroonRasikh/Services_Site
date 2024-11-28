@@ -1,0 +1,150 @@
+{%extends 'header.html' %}
+<!DOCTYPE html>
+{%load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <title>Meruzeciler</title>
+    <link rel="stylesheet" href="{% static 'css/merzeciler.css' %}">
+</head>
+<body>
+
+ 
+     
+    <section class="pastg">
+
+        <span class="word">
+            {% for i in menue %}
+            <a href="{% url 'home' %}">{{i.menue_1}}</a> 
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="{%url 'merzeciler' %}">{{i.menue_3}}</a>
+            <i class="fa-solid fa-angle-right"></i>
+            {%endfor%}
+        </span>
+            <hr>
+        
+        </section>
+    
+    
+        <div class="arter">
+        
+            <span class="spsb">
+                    {%for i in merzeciler|slice:1%}
+                    <h1>{{i.menue_name}}</h1>
+                    {%endfor%}
+            </span>
+    
+        </div>
+ <span class="lastfor">
+        <section class="divsg">
+                {%for i in merzeciler%}
+                <article class="allteam">
+
+
+            <span class="publika">
+                {% if forloop.counter0|divisibleby:2 %}
+                <div class="public">
+                    <img src="{{i.profile.url}}" alt="" class="gride">
+                    <span class="socials">
+                        <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                    </span>
+                </div>
+                <h1>{{i.name}}</h1>
+                <p>{{i.about}}</p>
+            </span>
+
+
+            <span class="publika">
+                {% else %}
+                <div class="public rest">
+                    <img src="{{i.profile.url}}" alt="" class="gride">
+                    <span class="socials">
+                        <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                    </span>
+                </div>
+                <h1>{{i.name}}</h1>
+                <p>{{i.about}}</p>
+            </span>
+            {% endif %}
+ 
+                </article>
+                {%endfor%}
+        </section>
+     </span>
+
+
+ 
+        <div class="artergg">
+    
+            <span class="spsb">
+                {%for i in merze1|slice:1%}
+             <h1>{{i.menue_name}}</h1>
+             {%endfor%}
+            </span>
+        
+            </div>
+    <span class="lastfor">
+            <section class="divsg">
+                {%for i in merze1 %}
+                <article class="allteam">
+    
+    
+                <span class="publika">
+                    {% if forloop.counter0|divisibleby:2 %}
+                    <div class="public">
+                        <img src="{{i.profile.url}}" alt="" class="gride">
+                         <span class="socials">
+                        <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                          </span>
+                    </div>
+                    <h1>{{i.name}}</h1>
+                    <p>{{i.about}}</p>
+                </span>
+    
+    
+                <span class="publika">
+                    {% else %}
+                    <div class="public rest">
+                        <img src="{{i.profile.url}}" alt="" class="gride">
+                        <span class="socials">
+                            <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                        </span>
+                    </div>
+                    <h1>{{i.name}}</h1>
+                    <p>{{i.about}}</p>
+                </span>
+                {% endif %}
+    
+    
+             
+
+   
+    
+    </article>
+    {%endfor%}
+            </section>
+        </span>
+ 
+ 
+    
+
+      
+{%endblock%}    
+</body>
+</html>

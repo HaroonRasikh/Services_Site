@@ -1,0 +1,38 @@
+.form-gap {
+    padding-top: 14%;
+}
+body{
+    background: linear-gradient(-135deg, #807f7f, #2c2c2c);
+    background-size: 100%;
+}
+.panel{
+    background: none;
+    width: 435px;
+    box-shadow: 1px 11px 19px black;
+}
+.text-center{
+    color:white;
+    width: 400px;
+    line-height: 3;
+}
+.btn-primary{
+    background-color: #7a37ff;
+}
+html{
+    min-height: 100%;
+}
+.panel-default{
+    border-radius: 8px;
+    border: 0;
+}
+p{
+    margin: 11px;
+    font-size: 25px;
+}
+.row{
+    margin-right: 110px;
+
+}
+.input-group{
+    margin-bottom: 23px;
+}

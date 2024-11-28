@@ -1,0 +1,819 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="{% static 'css/haqqimizda.css' %}">
+<link rel="stylesheet" href="{% static 'css/esas.css' %}">
+<link rel="stylesheet" href="{% static 'css/merzeciler.css' %}">
+<link rel="stylesheet" href="{%static 'css/elaqe.css' %}">
+<link rel="stylesheet" href="{%static 'css/komite.css' %}">
+<link rel="stylesheet" href="{%static 'css/program.css' %}">
+<link rel="stylesheet" href="{%static 'css/detail.css' %}">
+<link rel="stylesheet" href="{%static 'css/fotolar.css' %}">
+<link rel="stylesheet" href="{%static 'css/video.css' %}">
+<link rel="stylesheet" href="{%static 'css/footer.css' %}">
+<link rel="stylesheet" href="{%static 'css/sponsorlar.css' %}">
+<link rel="stylesheet" href="{%static 'css/xeberler.css' %}">
+<link rel="stylesheet" href="{%static 'css/merzeciler.css' %}">
+<link rel="stylesheet" href="{%static 'css/survey.css' %}">
+<link rel="stylesheet" href="{%static 'css/updateProfile.css' %}">
+<link rel="stylesheet" href="{%static 'css/header.css' %}">
+
+<!-- {% if model1 %}
+<h3>Model 1 Results</h3>
+{% for obj in model1 %} -->
+ <!-- <p>{{ obj.name }} - {{ obj.main_description|safe }}</p> -->
+<!-- {{ obj.main_description|safe}}</a> 
+{% endfor %}
+{% endif %}
+
+{% if model2 %}
+<h3>Model 2 Results</h3>
+{% for obj in model2 %}
+ <p>{{obj.name }} </p>   
+{% endfor %}
+{% endif %}
+
+{% if not model1 and not model2 %}
+
+        the result not found 
+{%endif%} -->
+
+
+
+
+
+<div class="searchall">
+
+  
+{% if about %}
+ 
+<section class="petro">  
+    <div class="art">
+
+        <span class="sps">
+          {% for i in about|slice:1%}
+         <h1>{{i.name}}</h1>
+          {%endfor%}
+        </span>
+    
+        </div>
+        <article class="pourter"> 
+        {% for i in about%}
+    
+        <span class="jpgss">
+            <img src="{{i.image.url}}" alt="">
+        </span>
+    
+        <span class="paragraf">
+    
+        <h1>{{i.main_description|safe}}</h1> 
+    
+        <section class="lorem">
+        
+        <span class="divler">
+    
+        <div class="blue"></div>
+        <div class="diffre"></div>
+        <div class="blue"></div>
+        
+        </span>
+        
+        <span class="divs">
+            <p>{{i.sub_description1|safe}}</p>
+    
+            <p>{{i.sub_description2|safe}}</p>
+    
+            <p>{{i.sub_description3|safe}}</p>
+        </span>
+    
+        </section>
+    
+        </span>
+    
+        {%endfor%}
+        
+        </article>
+</section>
+<a class="btn btn-primary linkedink" href="{% url 'about' %}" role="button" >səhifəya get</a>
+   {%endif%}
+
+{% if people %}
+<section class="like">
+           <span class="comment">
+        {% for i in people  %}
+    
+    <span class="desk">
+        {% if forloop.counter0|divisibleby:2%}
+        <div class="firist">
+        <img src="{{ i.profile.url }}" alt="" class="king">
+        </div> 
+    
+        <span class="text">
+        <h6>{{ i.name }}</h6>
+        <p>{{ i.about }}</p>        
+        
+        </span>
+        {%endif %}
+    </span>
+    
+    <span class="desk">
+        {% if not forloop.counter0|divisibleby:2 %}
+    
+        <div class="secind">
+        <img src="{{ i.profile.url }}" alt="" class="ling">
+        </div>
+    
+        <span class="text">
+        <h6>{{ i.name }}</h6>
+        <p>{{ i.about }}</p>        
+        </span>
+    {% endif %}
+    </span>
+          </span>
+             {% endfor %} 
+</section>
+<a class="btn btn-primary linkedink" href="{% url 'about' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+<!-------------------------MainPhoto------------------------>
+<!------------------------------------------------------------>
+{% if mainphoto %}
+{%for i in mainphoto%}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+               
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+
+            <img src="{{i.image_1.url}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{i.image_2.url }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{i.image_3.url }}" class="d-block w-100" alt="...">
+        </div>
+        </div>
+    {%endfor%}
+</div>
+{%for i in mainphoto%}
+  <section class="ekvator">
+    
+    <article class="orta">
+
+    <span class="basliqlar">
+        <h1 class="tehsil">{{i.title}}</h1>
+        <p class="millet">{{i.description|safe}}</p>
+        {%endfor%}
+            <a class="btn btn-primary linkedink" href="{%url 'about' %}" role="button" >Haqqımızda</a>
+    </span>
+    </article>
+    <a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >Sayfaya git</a>
+   </section>
+
+   
+   <a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+
+
+{%if subject %}
+<span class="point">
+    {%for i in subject%}
+    <h1 class="devet">{{i.title}}</h1>
+    <p class="estab">{{i.description|safe}}</p>
+    {%endfor%}
+</span>
+<a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >səhifəya get</a>
+{%endif %}
+
+{%if pic %}
+<div class="cards">
+    {% for i in pic %}
+       <ul class="cardlar">
+        
+           <li class="imgler">
+            <img src="{{i.image.url}}" alt="kitab" class="minipng">
+            <p class="elektr">{{i.description}}</p>
+            </li>
+            {%endfor%}
+    </ul>
+    
+</div>
+<br/>
+<a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+{%if  firstschedule %}
+     <span>
+    <h1 class="tarixler">{{firstschedule.name}}</h1>
+    </span>
+
+    <a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >səhifəya get</a>
+{%endif%}
+<br/>
+{%if schedule %}
+{% for i in schedule %}
+<div class="kvd"><a href="#"><p>{{i.date}}</p></a></div> 
+
+<span class="sozler">
+    
+    <div class="saybu">
+        <a href="#"><h2>{{i.title}}</h2></a>
+        <a href="#"><p>{{i.description}}</p></a>
+        {%endfor%}
+    </div>
+    
+ </span>
+ <a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+ 
+
+
+{%if news1 or newsname %}
+<article class="allofthis">
+
+    <section class="ortateref">
+    <span class="xheber">
+        <h1>{{newsname.name}}</h1>
+    <a href="#"><p>Hamısı<i class="fa-sharp fa-solid fa-arrow-right"></i></p></a>
+    </span>
+    <div class="cardlarBolmesi">
+    
+        {%for i in news1 %}
+    
+        <span class="digital">
+    
+            
+            <a href="/xaber/{{i.id}}"><img src="{{i.image.url}}" alt="bosh"></a>
+            <span class="xettler">
+            <div class="blue"></div><div class="gren"></div>
+            </span>
+            <p>{{i.title|truncatewords:7}}</p>
+            
+            <a href="/xaber/{{i.id}}"><h5>Daha ətraflı <i class="fa-solid fa-arrow-right-long"></i></h5></a>
+            
+            </span>
+            {%endfor%}
+     
+    
+    </div>
+    </section>
+    
+    </article>
+    <a class="btn btn-primary linkedink" href="{% url 'mainxabers' %}" role="button" >səhifəya get</a>
+    {%endif%}
+
+<!-------------------------upcoming event------------->
+
+{%if upcomevent%}
+{% with articles=upcomevent %}
+<article class="twodiv">
+
+    <span class="yet">
+        {%for i in articles|slice:":2" %}
+        {% if forloop.counter0|divisibleby:2 %}
+        <div class="first">
+            <h1>{{i.date}}</h1>
+            <p>{{i.statement}} </p>
+            {%endif%}
+        </div>
+        {%if not forloop.counter0|divisibleby:2 %}
+        <div class="second">
+            <h1>{{i.date}}</h1>
+            <p>{{i.statement}} </p>
+            {%endif%}
+        </div>
+        {%endfor%}
+
+
+    </span>
+    <a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >Sayfaya git</a>
+</article>
+
+<article class="twoliv">
+    
+    <span class="yer">
+        {%for i in articles|slice:"2:"%}
+        {% if forloop.counter0|divisibleby:2 %}
+    <div class="firstc">
+        <h1>{{i.date}}</h1>
+        <p>{{i.statement}}</p>
+        {%endif%}
+    </div>
+    {%if not forloop.counter0|divisibleby:2 %}
+    <div class="secondc">
+        <h1>{{i.date}}</h1>
+        <p>{{i.statement}}</p>
+        {%endif%}
+    </div>
+    {%endfor%}
+
+    </span>
+    {% endwith %}
+   
+</article>
+
+<a class="btn btn-primary linkedink" href="{% url 'home' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+
+<!-----------------sponsortitle and sponsors--------------------->
+
+{%if sponsortitle %}
+<span class="heber">
+    <h1>{{sponsortitle.name}}</h1>
+<a href="{% url 'sponsor' %}"><p>Hamısı<i class="fa-sharp fa-solid fa-arrow-right"></i></p></a>
+</span>
+<div class="part1">
+        
+    <img src="{{sponsortitle.image.url}}" alt="">
+    <p> {{sponsortitle.description|safe}}</p>
+     
+</div>
+<a class="btn btn-primary linkedink" href="{% url 'sponsor' %}" role="button" >səhifəya get</a>
+{%endif %}
+
+
+
+{% if sponsor %}
+<span class="sekillertoplu">
+    {%for i in sponsor %}
+    <div class="part1">
+        
+        <img src="{{i.image.url}}" alt="">
+        <p> {{i.description|safe}}</p>
+         
+    </div>
+    {%endfor%}  
+    
+</span>
+<a class="btn btn-primary linkedink" href="{% url 'sponsor' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+<!---------------------------Maruzaci1----------------->
+<!-------------------------------------------------------->
+{%if maruzaci1title%}
+<div class="artergg">
+    
+    <span class="spsb">
+        
+     <h1>{{maruzaci1title.menue_name}}</h1>
+     <a class="btn btn-primary linkedink" href="{% url 'merzeciler' %}" role="button" >səhifəya get</a>
+    </span>
+
+    </div>
+{%endif%}
+
+
+{%if maruzaci1%}
+ 
+<span class="lastfor">
+    <section class="divsg">
+            {%for i in maruzaci1%}
+            <article class="allteam">
+
+
+        <span class="publika">
+            {% if forloop.counter0|divisibleby:2 %}
+            <div class="public">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                <span class="socials">
+                    <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+
+
+        <span class="publika">
+            {% else %}
+            <div class="public rest">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                <span class="socials">
+                    <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+        {% endif %}
+
+            </article>
+            {%endfor%}
+    </section>
+ </span>
+ <a class="btn btn-primary linkedink" href="{% url 'merzeciler' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+<!----------------Maruzaci2---------------->
+<!------------------------------------------>
+{%if maruzaci2title%}
+<div class="artergg">
+    
+    <span class="spsb">
+        
+     <h1>{{maruzaci2title.menue_name}}</h1>
+     <a class="btn btn-primary linkedink" href="{% url 'merzeciler' %}" role="button" >səhifəya get</a>
+    </span>
+
+    </div>
+{%endif%}
+
+{%if maruzaci2%}
+
+ 
+<span class="lastfor">
+    <section class="divsg">
+        {%for i in maruzaci2%}
+        <article class="allteam">
+
+
+        <span class="publika">
+            {% if forloop.counter0|divisibleby:2 %}
+            <div class="public">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                 <span class="socials">
+                <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                  </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+
+
+        <span class="publika">
+            {% else %}
+            <div class="public rest">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                <span class="socials">
+                    <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+        {% endif %}
+
+
+     
+
+
+
+</article>
+{%endfor%}
+    </section>
+</span>
+
+<a class="btn btn-primary linkedink" href="{% url 'merzeciler' %}" role="button" >səhifəya get</a>
+
+{%endif%}
+
+
+<!----------------------Komite------------------------->
+<!----------------------------------------------------->
+{%if komite1title%}
+<div class="artergg">
+    
+    <span class="spsb">
+        
+     <h1>{{komite1title.menue_name}}</h1>
+     <a class="btn btn-primary linkedink" href="{% url 'komite' %}" role="button" >səhifəya get</a>
+    </span>
+
+    </div>
+{%endif%}
+{%if komite1%}
+ 
+<span class="lastfor">
+    <section class="divsg">
+            {%for i in komite1%}
+            <article class="allteam">
+
+
+        <span class="publika">
+            {% if forloop.counter0|divisibleby:2 %}
+            <div class="public">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                <span class="socials">
+                    <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+
+
+        <span class="publika">
+            {% else %}
+            <div class="public rest">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                <span class="socials">
+                    <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+        {% endif %}
+
+            </article>
+            {%endfor%}
+    </section>
+ </span>
+ <a class="btn btn-primary linkedink" href="{% url 'komite' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+<!---------------------------Komite2--------------------->
+<!-------------------------------------------------------> 
+{%if komite2title%}
+
+<div class="artergg">
+    
+    <span class="spsb">
+        
+     <h1>{{komite2title.menue_name}}</h1>
+     <a class="btn btn-primary linkedink" href="{% url 'komite' %}" role="button" >səhifəya get</a>
+    </span>
+
+</div>
+{%endif%}
+
+
+{%if komite2%}
+
+<span class="lastfor">
+    <section class="divsg">
+            {%for i in komite2%}
+            <article class="allteam">
+
+
+        <span class="publika">
+            {% if forloop.counter0|divisibleby:2 %}
+            <div class="public">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                <span class="socials">
+                    <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+
+
+        <span class="publika">
+            {% else %}
+            <div class="public rest">
+                <img src="{{i.profile.url}}" alt="" class="gride">
+                <span class="socials">
+                    <a href="{{i.socail1}}"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{i.social2}}"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{i.social3}}"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+            </div>
+            <h1>{{i.name}}</h1>
+            <p>{{i.about}}</p>
+        </span>
+        {% endif %}
+
+            </article>
+            {%endfor%}
+    </section>
+ </span>
+ <a class="btn btn-primary linkedink" href="{% url 'komite' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+<!------------------------Program------------------>
+<!------------------------------------------------->
+
+{%if programtitle%}
+
+<div class="artergg">
+    
+    <span class="spsb">
+        
+     <h1>{{programtitle.name}}</h1>
+     <a class="btn btn-primary linkedink" href="{% url 'program' %}" role="button" >səhifəya get</a>
+    </span>
+
+</div>
+{%endif%}
+
+
+
+{%if program1 %}
+<section class="down">
+    <article class="artik">
+        {%for i in program1 %}
+        <span>
+                    
+        <h1>{{i.title|safe}}</h1>
+        <p class="beynel"><span>{{i.description|safe}}</p>
+        <hr>
+        {%endfor%}
+        </span>
+        
+    </article>
+    <a class="btn btn-primary linkedink" href="{% url 'program' %}" role="button" >səhifəya get</a>   
+{%endif%}
+
+<!------------Program2----------------------------->
+{%if program2title%}
+ 
+<h2 class="eer">{{program2title.title}}</h2>
+<a class="btn btn-primary linkedink" href="{% url 'program' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+{%if program2 %}
+{%for i in program2 %}
+<span>
+<p class="laner">{{i.time}}</p><div class="yumrul"><div class="umrul"></div></div>  <p class="lame">{{i.description|safe}}</p>
+</span>    
+{%endfor%}
+<a class="btn btn-primary linkedink" href="{% url 'program' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+<!------------------program 3 ---------------->
+{%if program3title%}
+ 
+<h2 class="eer">{{program3title.title}}</h2>
+<a class="btn btn-primary linkedink" href="{% url 'program' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+{%if program3 %}
+{%for i in program3 %}
+<span>
+<p class="laner">{{i.time}}</p><div class="yumrul"><div class="umrul"></div></div>  <p class="lame">{{i.description|safe}}</p>
+</span>    
+{%endfor%}
+<a class="btn btn-primary linkedink" href="{% url 'program' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+<!--------------------Program Directors-------------->
+{%if program4 %}
+{%for i in program4 %}
+<article class="greenandphoto">
+    
+    
+<img src="{{i.image.url}}" alt="" class="random">
+<div class="retrrikk">
+    <h2 class="tibb">{{i.name}}</h2>
+    <h2 class="tibbr">{{i.description}}</h2>
+</div>
+
+   
+</article>
+{%endfor%}
+<a class="btn btn-primary linkedink" href="{% url 'program' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+<!--------------------abstract 0 -------------->
+<!--------------------------------------------->
+
+{%if abstract0 %}
+<article class="pasterg">
+    
+    {%for i in abstract0 %}
+
+    <h4>{{i.title}}</h4>
+
+    <p>{{i.description|safe}}</p>
+
+    <a class="btn btn-primary linkedink" href="{% url 'abstract_online' %}" role="button" >Sayfaya git</a>
+</article>
+ {%endfor%}
+{%endif%}
+
+<!--------------------abstract 1 -------------->
+<!--------------------------------------------->
+{%if abstract1 %}
+<div class="buttonss">        
+    <article class="pasterg">
+        {%for i in abstract1 %}
+             <h1>{{i.title_name}}</h1>
+             <h4>{{i.title}}</h4>
+
+             <p>{{i.description|safe}}</p>
+
+         
+     </article>
+              {%endfor%}            
+</div> 
+<a class="btn btn-primary linkedink" href="{% url 'abstract_online' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+<!--------------------abstract 2 -------------->
+<!--------------------------------------------->
+{%if abstract2 %}
+<div class="buttonss">        
+    <article class="pasterg">
+        {%for i in abstract2 %}
+             <h1>{{i.title_name}}</h1>
+             <h4>{{i.title}}</h4>
+
+             <p>{{i.description|safe}}</p>
+
+         
+     </article>
+              {%endfor%}            
+</div> 
+<a class="btn btn-primary linkedink" href="{% url 'abstract_online' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+<!--------------------abstract 3 -------------->
+<!--------------------------------------------->
+
+{%if abstract3 %}
+<div class="buttonss">        
+    <article class="pasterg">
+        {%for i in abstract3 %}
+             <h1>{{i.title_name}}</h1>
+             <h4>{{i.title}}</h4>
+
+             <p>{{i.description|safe}}</p>
+
+         
+     </article>
+              {%endfor%}            
+</div> 
+<a class="btn btn-primary linkedink" href="{% url 'abstract_online' %}" role="button" >səhifəya get</a>
+{%endif%}
+<!--------------------abstract 4 -------------->
+<!--------------------------------------------->
+{%if abstract4 %}
+<div class="buttonss">        
+    <article class="pasterg">
+        {%for i in abstract4 %}
+             <h1>{{i.title_name}}</h1>
+             <h4>{{i.title}}</h4>
+
+             <p>{{i.description|safe}}</p>
+
+         
+     </article>
+              {%endfor%}            
+</div> 
+<a class="btn btn-primary linkedink" href="{% url 'abstract_online' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+<!---------abstract 5-->
+{%if abstract5 %}
+<div class="buttonss">        
+    <article class="pasterg">
+        {%for i in abstract5 %}
+             <h1>{{i.title_name}}</h1>
+             <h4>{{i.title}}</h4>
+
+             <p>{{i.description|safe}}</p>
+
+         
+     </article>
+              {%endfor%}            
+</div> 
+<a class="btn btn-primary linkedink" href="{% url 'abstract_online' %}" role="button" >səhifəya get</a>
+{%endif%}
+
+
+{%  if not about and not abstract5 and not abstract3 and not abstract4 and not abstract1 and not abstract2 and not abstract0 and not programtitle and not program1 and not program2title and not program2 and not program3title and not  program3 and not program4 and not people and not subject and not pic and not schedule and not newsname and not news1 and not maruzaci1 and not maruzaci2 and not maruzaci1title and not maruzaci2title and not komite1title and not komit1 and not komite2title and not komite2 and not sponsor and not sponsortitle and not mainphoto and not upcomevent%}
+
+nəticə tapılmadı...
+
+{%endif%}
+</div>
+</body>
+</html>
+{% endblock %}

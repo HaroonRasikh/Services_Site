@@ -1,0 +1,36 @@
+
+h3{
+    border: 1px solid;
+    padding: 11px;
+    margin: 20px 10px 10px 0;
+    border-radius: 20px 0;
+    background-color: aliceblue;
+}
+span{
+    color: #29890d;
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+.profile{
+    width: 1072px;
+    margin-top: 33px;
+}
+.paroli{
+    height: 34px;
+    padding: 20px 15px;
+    background-color: #1F4586;
+    color: white;
+    margin-top: 29px;
+    margin-right: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'poppins',sans-serif;
+    border-radius: 10px;
+}
+.yyeni{
+    text-decoration: none;
+    color: white;
+}

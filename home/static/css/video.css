@@ -1,0 +1,222 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.words{
+    display: flex;
+    align-items: baseline;
+    width: 1072px;
+    flex-direction: row;
+}
+.words > a, i {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.lastg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+}
+hr{
+    border: 1px solid rgba(157, 158, 159, 0.16);
+    width: 1072px;
+}
+.heber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.heber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2E3131;
+}
+.heber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.heber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.ich{
+    width: 1072px;
+    align-self: center;
+    display: flex;
+}
+.gangom{
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+    flex-direction: column;
+    width: 100%;
+}
+.sekillertoplu div{
+    width: 336px;
+    height: 299px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 100px rgba(223, 223, 223, 0.16);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sekillertoplu img{
+    width: 111px;
+    height: 131px;
+    margin-top: 40px;
+    display: flex;
+    align-self: center;
+}
+.sekillertoplu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.sekillertoplu p{
+    text-align: center;
+    margin: 16px 14px 0 14px;
+    color: rgba(46, 49, 49, 0.6);
+    opacity: 85%;
+}
+.btnm{
+    width: 164px;
+    height: 52px;
+    background: #1F4586;
+    border: 1px solid #1F4586;
+    border-radius: 4px;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnm:hover{
+    background-color: #2b5192;
+}
+.xheber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.ortateref{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    flex-direction: column;
+}
+.xheber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F4586;
+}
+.xheber i{
+    width: 14px;
+    height: 24px;
+}
+.xheber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.cardlarBolmesi video{
+    height: 274px;
+    width: 336px;
+}
+.allofthis{
+    display: flex;
+    width: 1072px;
+    flex-wrap: wrap;
+    grid-gap: 0 21px;
+    justify-content: center;
+}
+.cardlarBolmesi{
+    display: flex;
+    grid-gap: 17px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    /* flex-direction: row-reverse; */
+}
+.digital p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    height: 48px;
+    width: 322px;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+    }
+.blue{
+    height: 4px;
+    width: 168px;
+    border-radius: 0px;
+    background-color: #1F4586;
+}
+.gren{
+    height: 4px;
+    width: 168px;
+    border-radius: 0px;
+    background-color: #82BD3F;
+}
+.xettler{
+    display: flex;
+}
+.digital h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+.digital a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.xettik{
+    display: flex;
+    height: 24px;
+    margin-top: 10px;
+}
+
+
+    @media only screen and (max-width:1130px){
+        .cardlarBolmesi{
+           display: flex;
+           justify-content: center;
+           width: 100%;
+           height: 100%;
+           flex-wrap: wrap;
+           padding: 0 14px 0 14px;
+           text-align: center;
+           justify-content: center;
+        }
+        .lastg{
+           display: none;
+        }
+       }
+     
+ @media only screen and (max-width:750px){
+           .cardlarBolmesi{
+               flex-direction: column;
+           }
+       }

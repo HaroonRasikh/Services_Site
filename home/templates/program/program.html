@@ -1,0 +1,129 @@
+ 
+{%extends 'header.html'%}
+{% block content %}
+<!DOCTYPE html>
+{%load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <title>Program</title>
+    <link rel="stylesheet" href="{% static 'css/program.css' %}"/>
+</head>
+<body>
+ 
+ 
+       
+    <section class="pastg">
+
+        <span class="word">
+            {% for i in menue|slice:1 %}
+            <a href="{% url 'home' %}">{{i.menue_1}}</a>
+              <i class="fa-solid fa-angle-right"></i>
+              <a href="{%url 'program' %}">{{i.menue_4}}</a>
+              <i class="fa-solid fa-angle-right"></i>
+              {%endfor%}
+        </span>
+            <hr>
+        
+        </section>
+
+        <div class="arter">
+    
+            <span class="spsb">
+                {%for i in program|slice:1%}
+             <h1>{{i.name}}</h1>
+              
+              {%if i.file%}
+             <a href="{{i.file.url}}" value="downloand" download="program">PDF-Yüklə<i class="fa-solid fa-file-pdf"></i></a>
+                {%endif%}
+             {%endfor%}
+            </span>
+
+            </div>
+
+            <section class="down">
+                <article class="artik">
+                    {%for i in program %}
+                    <span>
+                                
+                    <h1>{{i.title|default:""|safe}}</h1>
+                    <p class="beynel"><span>{{i.description|safe}}</p>
+                    <hr>
+                    {%endfor%}
+                    </span>
+                    
+                </article>
+                
+
+                <article class="rzza">
+                    
+                   
+                        {%for i in tarih|slice:1 %}
+                    <section class="anorma">
+                        
+                    <h2 class="eer">{{i.title|safe}}</h2>
+                      {%endfor%}
+                    
+                    {%for i in tarih %}
+                    <span>
+                    <p class="laner">{{i.time}}</p><div class="yumrul"><div class="umrul"></div></div>  <p class="lame">{{i.description|safe}}</p>
+                    </span>    
+                    {%endfor%}
+                 
+                    </section>
+                    {%for i in director %}
+                    <article class="greenandphoto">
+                        
+                        
+                    <img src="{{i.image.url}}" alt="" class="random">
+                    <div class="retrrikk">
+                        <h2 class="tibb">{{i.name}}</h2>
+                        <h2 class="tibbr">{{i.description}}</h2>
+                    </div>
+                    
+                       
+                    </article>
+                    {%endfor%}
+                </article>
+
+
+                <article class="rzza">
+
+                   
+
+                    <section class="anorma">
+                        {%for i in event2|slice:1 %}
+                    <h2 class="eer">{{i.title}}</h2>
+                    {%endfor%}
+                    {%for i in event2%} 
+                      <span>
+                       
+                        <p class="lanert">{{i.time|safe}}</p>
+                        <div class="yumrul"><div class="umrul"></div> </div> 
+                       
+                         <p class="lamert">{{i.description|safe}}</p>
+                  
+                      </span>    
+                    
+                     {%endfor%}
+
+                    </section>
+                    
+
+                </article>
+                </section>
+
+ 
+
+</body>
+ 
+{%endblock%}     
+</html>

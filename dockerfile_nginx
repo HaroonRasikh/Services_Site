@@ -1,0 +1,15 @@
+### STAGE 1: Build ###
+
+FROM nginx:1.14.1-alpine
+
+## Copy our default nginx config
+
+RUN rm -f /etc/nginx/conf.d/*
+COPY    nginx.conf   /etc/nginx/conf.d/
+
+## Remove default nginx website
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY ./staticfiles /app/staticfiles
+
+CMD ["nginx", "-g", "daemon off;"]

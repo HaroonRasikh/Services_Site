@@ -1,0 +1,67 @@
+{% extends 'header.html' %}
+<!DOCTYPE html>
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <title>Elaqe</title>
+    <link rel="stylesheet" href="{% static 'css/elaqe.css' %}">
+</head>
+<body>
+
+<section class="pastg">
+
+        <span class="word">
+            {% for i in menue %}
+            <a href="{% url 'home' %}">{{i.menue_1}}</a>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <a href="{% url 'elaqe' %}">{{i.menue_19}}</a>
+                    <i class="fa-solid fa-angle-right"></i>
+            {%endfor%}        
+        </span>
+        <hr>
+        
+</section>
+    
+    
+        <div class="arter">
+    
+        <span class="spsb">
+         <h1>{{i.menue_19}}</h1>
+        </span>
+    
+        </div>
+
+<span class="oprut">
+<article>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="522px" height="480px" id="gmap_canvas" src="{{harite.map}}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://getasearch.com/nordvpn-coupon/"></a><br><a href="https://www.embedgooglemap.net"></a></div> </div>
+    
+        <form method ="post" action="{% url 'elaqe' %}"  class="formn">
+            {% csrf_token %}
+                <label for="fname">Adınız</label><br>
+                <input type="text" id="fname" name="Name" placeholder="Zeynəb"><br>
+                <label for="lname">Mobil nömrə</label><br>
+                <input type="tel" id="lname" name="Mobile_number" placeholder="+994504837063"><br>
+                <label for="Sdeb" class="mess">Mesaj</label><br>
+                <textarea name="Message" id="" cols="30" rows="10" placeholder="UX/UI Dizaynı ilə maraqlanirdim zəhmət olmasa məlumat verməyinizi xaiş ederdim"></textarea>
+                <input type="submit" value="Göndər" class="submit">
+              </form>
+
+</article>        
+</span>
+{% if sent %}
+<br><br><br>
+<h3 style="color: green;">Mesajınız uğurla alındı, təşəkkür edirəm!</h3>
+{% endif %}
+ {% endblock %}
+
+        </body>
+</html>

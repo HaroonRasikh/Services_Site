@@ -1,0 +1,499 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.words{
+    display: flex;
+    align-items: baseline;
+    width: 1072px;
+    flex-direction: row;
+}
+.words > a, i {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.lastg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+}
+hr{
+    border: 1px solid rgba(157, 158, 159, 0.16);
+    width: 1072px;
+}
+.heber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.heber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2E3131;
+}
+.heber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.heber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.ich{
+    width: 1072px;
+    align-self: center;
+    display: flex;
+}
+.gangom{
+}
+.sekillertoplu div{
+    width: 336px;
+    height: 299px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 100px rgba(223, 223, 223, 0.16);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sekillertoplu img{
+    width: 111px;
+    height: 131px;
+    margin-top: 40px;
+    display: flex;
+    align-self: center;
+}
+.sekillertoplu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.sekillertoplu p{
+    text-align: center;
+    margin: 16px 14px 0 14px;
+    color: rgba(46, 49, 49, 0.6);
+    opacity: 85%;
+}
+.btnm{
+    width: 164px;
+    height: 52px;
+    background: #1F4586;
+    border: 1px solid #1F4586;
+    border-radius: 4px;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnm:hover{
+    background-color: #2b5192;
+}
+.xheber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.ortateref{
+}
+.xheber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F4586;
+}
+.xheber i{
+    width: 14px;
+    height: 24px;
+}
+.xheber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.cardlarBolmesi img{
+    height: 274px;
+    width: 336px;
+}
+.allofthis{
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.cardlarBolmesi{
+    display: flex;
+    grid-gap: 17px;
+    flex-wrap: wrap;
+}
+.digital p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    height: 48px;
+    width: 322px;
+    font-family: 'Roboto', sans-serif;}
+.blue{
+    height: 4px;
+    width: 168px;
+    border-radius: 0px;
+    background-color: #1F4586;
+}
+.gren{
+    height: 4px;
+    width: 168px;
+    border-radius: 0px;
+    background-color: #82BD3F;
+}
+.xettler{
+    display: flex;
+}
+.digital h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+.digital a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.xettik{
+    display: flex;
+    height: 24px;
+    margin-top: 10px;
+}
+
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 1;
+}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+     opacity: 1;
+}
+.carousel {
+    height: 100%; }
+  
+  .carousel-item {
+    width: default !important; }
+  
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    alignment-baseline: baseline; }
+  
+  .carousel-control-next,
+  .carousel-control-prev {
+    opacity: 5; }
+  
+  .carousel-control-next-icon:hover {
+    opacity: 5; }
+  
+  .carousel-control-prev-icon:hover {
+    opacity: 5; }
+  
+  .carousel-control-next,
+  .carousel-control-prev {
+    opacity: 5; }
+  
+    .carousel-control-next, .carousel-control-prev {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: 0 0;
+        border: 0;
+        opacity: 5;
+        transition: opacity 0.2sn ease;
+    }
+  .carousel-control-prev-icon:hover {
+    opacity: 5; }
+  
+  .navbar-light .navbar-brand:focus {
+    color: wheat; }
+    .carousel-inner .text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold; }
+      
+      .carousel-inner .text p {
+        width: 60%;
+        opacity: 5; }
+      
+      .carousel-inner h3 {
+        font-size: 35px;
+        color: whitesmoke;
+        margin-bottom: 25px; }
+
+        [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+            cursor: pointer;
+            width: 130px;
+            background: none;
+            border: none;
+        }   
+        
+        #home{
+            
+align-self: center;
+            
+width: 1072px;
+            
+margin-top: 24px;
+        }
+        .w-100 {
+            width: 100%!important;
+            height: 452px;
+        }
+        #home img{
+            width: 1072px;
+height: 452px;
+        }
+
+.kingor{
+    width: 1072px;
+}        
+.texts{
+    display: flex;
+    justify-content: center;
+}
+.texts h1{
+font-family: 'Roboto'sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 32px;
+margin: 20px 0 ;
+}
+.texts p{
+    font-family: 'Roboto'sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    }
+
+    .gangom{
+        display: flex;
+        margin-top: 36px;
+        width: 1072px;
+        flex-wrap: wrap;
+        grid-gap: 0 17px;
+    }
+    .sekillertoplu div{
+        width: 336px;
+        height: 299px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 100px rgba(223, 223, 223, 0.16);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sekillertoplu img{
+        width: 111px;
+        height: 131px;
+        margin-top: 40px;
+        display: flex;
+        align-self: center;
+    }
+    .sekillertoplu{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+    .sekillertoplu p{
+        text-align: center;
+        margin: 16px 14px 0 14px;
+        color: rgba(46, 49, 49, 0.6);
+        opacity: 85%;
+    }
+    .btnm{
+        width: 164px;
+        height: 52px;
+        background: #1F4586;
+        border: 1px solid #1F4586;
+        border-radius: 4px;
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnm:hover{
+        background-color: #2b5192;
+    }
+    .xheber{
+        width: 1072px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .ortateref{
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+        flex-direction: column;
+    }
+    .xheber h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #1F4586;
+    }
+    .xheber i{
+        width: 14px;
+        height: 24px;
+    }
+    .xheber a{
+        text-decoration: none;
+        color: #2E3131;
+    }
+    .cardlarBolmesi img{
+        height: 274px;
+        width: 336px;
+    }
+    .allofthis{
+        /* display: flex; */
+        /* justify-content: center; */
+    }
+    .cardlarBolmesi{
+        display: flex;
+        grid-gap: 17px;
+        flex-wrap: wrap;
+    }
+    .digital p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 24px;
+        height: 48px;
+        width: 322px;
+        font-family: 'Roboto', sans-serif;}
+    .blue{
+        height: 4px;
+        width: 168px;
+        border-radius: 0px;
+        background-color: #1F4586;
+    }
+    .gren{
+        height: 4px;
+        width: 168px;
+        border-radius: 0px;
+        background-color: #82BD3F;
+    }
+    .xettler{
+        display: flex;
+    }
+    .digital h5{
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .digital a{
+        text-decoration: none;
+        color: #2E3131;
+    }
+    .xettik{
+        display: flex;
+        height: 24px;
+        margin-top: 10px;
+    }
+    footer{
+        background-color: #1F4586;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+        margin-top: 80px;
+        width: 100%;
+    }
+    .last{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+    }
+    footer ol{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        justify-content: space-between;
+        width: 1072px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0rem;
+        padding-right: 0;
+    }
+    footer ul{
+        padding-left: 0;
+    }
+    footer a{
+        font-family:'Roboto', sans-serif ;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    .lasting{
+        background-color: #82BD3F;
+        width: 100%;
+    }
+    .lasting h1{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 16px 0;
+        margin: 0;
+    }
+    @media only screen and (max-width:1134px){
+        #home img {
+            width:100%;
+        }
+        #home{
+            width: 100%!important;
+        }
+        .gangom{
+            width:100%;
+        }
+        .lastg{
+            display: none;
+        }
+    }
+    

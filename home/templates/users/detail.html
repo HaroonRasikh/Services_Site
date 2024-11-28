@@ -1,0 +1,38 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/detail.css' %}">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <div class="profile">
+  {%  if  currentUser %}
+ 
+    
+<h3> <span>Ad:</span>   {{currentUser.fullname}}</h3>
+<h3><span>Doğum tarixi:</span>  {{currentUser.birthdate}}</h3>
+<h3><span>Şəxsiyyət vəsiqəsi nömrəsi:</span>  {{currentUser.idcard}}</h3>
+<h3><span>Xüsusiyyət:</span>   {{currentUser.speciality}}</h3>
+<h3><span>Telefon nömrəsi:</span>  {{currentUser.phone}}</h3>
+<h3><span>İş yeri:</span>  {{currentUser.workplace}}</h3>
+<h3><span>Növ:</span>  {{currentUser.type}}</h3>
+
+
+<a href="{% url 'updateProfile'%}" class="yyeni"><button type="button" class="paroli">Profili yeniləyin</button></a> 
+
+{%  else   %}
+istifadəçi məlumatı mövcud deyil
+{%  endif  %}  
+</div>
+</section>
+</body>
+</html>
+
+{%endblock%}

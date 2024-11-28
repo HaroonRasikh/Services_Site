@@ -1,0 +1,203 @@
+{% extends 'header.html' %}
+{%block content %}
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <title>Sponsorlar</title>
+    <link rel="stylesheet" href="{% static 'css/sponsorlar.css' %}">
+</head>
+<body>
+
+
+    
+    <section class="lastg">
+
+        <span class="words">
+            {% for i in menue|slice:1 %}
+            <a href="{% url 'home' %}">{{i.menue_1}}</a>
+              <i class="fa-solid fa-angle-right"></i>
+              <a href="{%url 'about' %}">{{i.menue_18}}</a>
+              <i class="fa-solid fa-angle-right"></i>
+              {%endfor%}
+        </span>
+            <hr>
+        
+        </section>
+
+    <article class="gangom">
+
+        <section class="ich">
+    
+        <span class="heber">
+            {%for i in sponsor|slice:1 %}
+            <h1>{{i.name}}</h1>
+            {%endfor%}
+        </span>
+        
+        <span class="sekillertoplu">
+            {%for i in sponsor %}
+            <div class="part1">
+                
+                <img src="{{i.image.url}}" alt="">
+                <p> {{i.description|safe}}</p>
+                 
+            </div>
+            {%endfor%}  
+            
+        </span>
+        </section>
+
+        <section class="ich">
+    
+            <span class="heber">
+                {%for i in sponsor1|slice:1 %}
+                <h1>{{i.name}}</h1>
+                {%endfor%}
+            </span>
+            
+            <span class="sekillertoplu">
+                {%for i in sponsor1 %}
+                <div class="part1">
+                    
+                    <img src="{{i.image.url}}" alt="">
+                    <p> {{i.description|safe}}</p>
+                     
+                </div>
+                {%endfor%}  
+                
+            </span>
+            </section>
+
+            <section class="ich">
+    
+                <span class="heber">
+                    {%for i in sponsor2|slice:1 %}
+                    <h1>{{i.name}}</h1>
+                    {%endfor%}
+                </span>
+                
+                <span class="sekillertoplu">
+                    {%for i in sponsor2 %}
+                    <div class="part1">
+                        
+                        <img src="{{i.image.url}}" alt="">
+                        <p> {{i.description|safe}}</p>
+                         
+                    </div>
+                    {%endfor%}  
+                    
+                </span>
+                </section>
+
+                <section class="ich">
+    
+                    <span class="heber">
+                        {%for i in sponsor3|slice:1 %}
+                        <h1>{{i.name}}</h1>
+                        {%endfor%}
+                    </span>
+                    
+                    <span class="sekillertoplu">
+                        {%for i in sponsor3 %}
+                        <div class="part1">
+                            
+                            <img src="{{i.image.url}}" alt="">
+                            <p> {{i.description|safe}}</p>
+                             
+                        </div>
+                        {%endfor%}  
+                        
+                    </span>
+                    </section>
+
+                    <section class="ich">
+    
+                        <span class="heber">
+                            {%for i in sponsor4|slice:1 %}
+                            <h1>{{i.name}}</h1>
+                            {%endfor%}
+                        </span>
+                        
+                        <span class="sekillertoplu">
+                            {%for i in sponsor4 %}
+                            <div class="part1">
+                                
+                                <img src="{{i.image.url}}" alt="">
+                                <p> {{i.description|safe}}</p>
+                                 
+                            </div>
+                            {%endfor%}  
+                            
+                        </span>
+                        </section>
+    
+    </article>
+
+
+    <section class="paster">
+        <div class="xperti">
+
+            <form class="formn" method="post" action="{% url 'sponsor' %}">
+                {% csrf_token %}
+               
+                <label for="fname">Ad</label><br>
+                <input type="text" id="fname" name="Name" placeholder="Zeynəb"><br>
+                <label for="lname">Soyad</label><br>
+                <input type="text" id="lname" name="Surname" placeholder="Zeynəb"><br>
+                <label for="fname">Mobil nömrə</label><br>
+                <input type="tel" id="fname" name="Mobile" placeholder="Zeynəb"><br>
+
+                <input type="submit" value="Göndər" class="gondermek">
+
+                <label for="lname">E-mail</label><br>
+                <input type="email" id="lname" name="Emailform" placeholder="Zeynəb"><br>
+                <label for="fname">Şirkətin adı</label><br>
+                <input type="text" id="fname" name="Company" placeholder="Zeynəb"><br>
+                <label for="lname">Konfransın  adı</label><br>
+                <input type="text" id="lname" name="Conference" placeholder="Zeynəb"><br>
+                
+
+
+              </form>
+           
+
+        </div>
+    </section>
+    {% if sent %}
+    <br><br><br>
+    <h3 style="color: green;">Dəstək olduğunuz üçün təşəkkür edirik!</h3>
+    {% endif %}
+
+
+    <script>
+        function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+openDropdown.classList.remove('show');
+}
+}
+}
+}
+</script>
+
+
+</body>
+{%endblock %}
+</html>

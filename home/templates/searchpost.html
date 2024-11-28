@@ -1,0 +1,123 @@
+<body>
+<section class="petro">
+     
+    <article class="pourter">
+     
+     
+       
+   
+    <span class="jpgss">
+        <img src="{{i.image.url}}" alt="">
+    </span>
+   
+    <span class="paragraf">
+   
+       <h1>{{post1.main_description|safe}}</h1> 
+   
+    <section class="lorem">
+       
+       <span class="divler">
+   
+       <div class="blue"></div>
+       <div class="diffre"></div>
+       <div class="blue"></div>
+       
+       </span>
+       
+       <span class="divs">
+        <p>{{post1.sub_description1|safe}}</p>
+   
+        <p>{{post1.sub_description2|safe}}</p>
+   
+        <p>{{post1.sub_description3|safe}}</p>
+       </span>
+   
+    </section>
+   
+    </span>
+   
+ 
+     
+    </article>
+    <section class="like">
+
+
+
+        <span class="comment">
+         {% for i in people  %}
+       
+       <span class="desk">
+        {% if forloop.counter0|divisibleby:2%}
+        <div class="firist">
+          <img src="{{ i.profile.url }}" alt="" class="king">
+        </div> 
+       
+        <span class="text">
+          <h6>{{ i.name }}</h6>
+          <p>{{ i.about }}</p>        
+        
+         </span>
+         {%endif %}
+       </span>
+       
+       <span class="desk">
+        {% if not forloop.counter0|divisibleby:2 %}
+       
+        <div class="secind">
+          <img src="{{ i.profile.url }}" alt="" class="ling">
+        </div>
+       
+        <span class="text">
+          <h6>{{ i.name }}</h6>
+          <p>{{ i.about }}</p>        
+        </span>
+       {% endif %}
+       </span>
+       </span>
+       {% endfor %}
+       
+       
+       </section>
+
+
+       <section class="like">
+
+
+
+        <span class="comment">
+          
+       
+       <span class="desk">
+        
+        <div class="firist">
+          <img src=" " alt="" class="king">
+        </div> 
+       
+        <span class="text">
+          <h6>{{ post2.name }}</h6>
+          <p>{{ post2.about }}</p>        
+        
+         </span>
+        
+       </span>
+       
+       <span class="desk">
+         
+       
+        <div class="secind">
+          <img src="{{ i.profile.url }}" alt="" class="ling">
+        </div>
+       
+        <span class="text">
+            <h6>{{ post2.name }}</h6>
+            <p>{{ post2.about }}</p>         
+        </span>
+    
+       </span>
+       </span>
+    
+       
+       
+       </section>
+    
+</body>

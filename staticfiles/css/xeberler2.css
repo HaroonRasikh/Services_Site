@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.irt{
+    color: white;
+    margin-left: 20px;
+}
+
+  .allofthis{
+    display: flex;
+    justify-content: center;
+}
+.ortateref{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    width: 1072px;
+    flex-direction: column;
+}
+.xheber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.xheber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F4586;
+}
+.xheber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.xheber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.cardlarBolmesi img{
+    height: 274px;
+    width: 336px;
+}
+.cardlarBolmesi{
+    display: flex;
+    grid-gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+.digital p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    height: 48px;
+    width: 336px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 16px;
+}
+.blue{
+    height: 4px;
+    width: 168px;
+    left: 0px;
+    top: 270px;
+    border-radius: 0px;
+    background-color: #1F4586;
+}
+.gren{
+    height: 4px;
+    width: 168px;
+    left: 0px;
+    top: 270px;
+    border-radius: 0px;
+    background-color: #82BD3F;
+}
+.xettler{
+    display: flex;
+}
+.digital h5{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+.digital i{
+    margin-inline: 16px 0;
+}
+.digital a{
+    text-decoration: none;
+    color: #2E3131;
+}
+footer{
+    background-color: #1F4586;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-top: 80px;
+}
+.last{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+footer ol{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-between;
+    width: 1072px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0rem;
+    padding-right: 0;
+}
+footer ul{
+    padding-left: 0;
+}
+footer a{
+    font-family:'Roboto', sans-serif ;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.lasting{
+    background-color: #82BD3F;
+}
+.lasting h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 16px 0;
+    margin: 0;
+}
+

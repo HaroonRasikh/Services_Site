@@ -1,0 +1,99 @@
+{%extends 'header.html' %}
+<!DOCTYPE html>
+{% block content %}
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <title>Fotolar 2</title>
+    <link rel="stylesheet" href="{% static 'css/fotolar2.css' %}">
+    
+</head>
+<body>
+    
+    
+    
+
+    <section class="lastg">
+
+        <span class="words">
+            {% for i in menue|slice:1 %}
+            <a href="{% url 'home' %}">{{i.menue_1}}</a>
+              <i class="fa-solid fa-angle-right"></i>
+              <a href="{%url 'fotos' %}">{{i.menue_15}}</a>
+              <i class="fa-solid fa-angle-right"></i>
+              {%endfor%}
+        </span>
+            <hr>
+        
+        </section>
+
+    <article class="gangom">
+
+        <section class="ich">
+    
+        <span class="heber">
+            <h1>Foto</h1>
+    
+        </span>
+
+        </section>
+
+        <div class="page" id="home">
+
+                <img src="{{ gallerypost.image.url }}" alt="">
+          </div>
+
+<article class="texts">
+  <div class="kingor">
+
+<h1>{{ gallerypost.title}}</h1>
+<p>{{ gallerypost.description}}
+</p>
+  </div>
+</article>
+
+<article class="gangom">
+    {% for i in gallery %}
+    
+ 
+  <section class="ortateref">
+  <div class="cardlarBolmesi">
+  
+      <span class="digital">
+          <a href="/fotopost/{{i.id}}"><img src="{{i.image.url}}" alt="bosh"></a>
+          <span class="xettler">
+          <div class="blue"></div><div class="gren"></div>
+          </span>
+          <div class="xettik">
+          <i class="fa-sharp fa-solid fa-calendar-days"></i><p>{{i.date}}</p>
+          
+          </div>
+          <p>{{i.date_detail}}</p>
+          </span>
+ 
+  
+  </div>
+  </section>
+  {%endfor%}
+  
+ 
+
+ 
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+          </script>
+        
+</body>
+
+{% endblock %}
+</html>

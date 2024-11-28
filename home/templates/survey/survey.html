@@ -1,0 +1,535 @@
+{% extends 'header.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="{%static 'css/survey.css' %}">
+</head>
+<body>
+
+  <section class="ich">
+    
+    <span class="heber">
+      {%for i in menue%}
+        <h1 class="asd">{{i.menue_5}}</h1>
+        <h1 class="xbzibit">{{i.menue_17}}</h1>
+    </span>
+    {%endfor%}
+   <a href="{% url 'sign_out'%}"><button type="button" class="back">Çıxış</button></a> 
+   <a href="{% url 'detail'%}"><button type="button" class="profil">Profil</button></a> 
+    </section>
+
+    <div class="firstempty">
+
+    <div class="empty">
+
+      <!--
+ 
+ 
+ 
+textinput1
+textinput2
+textinput3
+textinput4
+file1
+file2
+file3
+selectdropdown1
+selectdropdown2
+keywordinput
+lastcheckboxtitle1
+lastcheckboxtitle2
+lastcheckboxtitle3-->
+
+<form id="myForm" method="POST" action="{% url 'survey' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div role="main" class="form-all">
+        <ul class="form-section page-section">
+          <li id="cid_1" class="form-input-wide" data-type="control_head">
+            <div class="form-header-group  header-defecto">
+              <div class="header-text httal htvam">
+                <h2 id="header_1" class="form-header" data-component="header">{{survey_title.maintitle}}</h2>
+              </div>
+            </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_textbox" id="id_3"><label class="form-label battle  form-label-left form-label-auto" id="label_3" for="input_3"> {{survey_title.input1}}<span class="form-required">*</span> </label>
+
+            <div id="cid_3" class="form-input jf-required"> <input type="text" id="input_3" name="textbox1" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_3" required="" /> </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_dropdown" id="id_38"><label class="form-label form-label-left form-label-auto" id="label_38" for="input_38"> {{survey_title.dropdown1}}<span class="form-required">*</span> </label>
+            <div id="cid_38" class="form-input jf-required"> <select class="form-dropdown validate[required]" id="input_38" name="dropdown1" style="width:460px" data-component="dropdown" required="" aria-label="Введите вопрос">
+              {% for i in option1 %} 
+              <option value="{{ i.id }}">{{ i.option }}</option>
+              {% endfor %}
+              </select> </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_dropdown" id="id_39"><label class="form-label form-label-left form-label-auto" id="label_39" for="input_39"> {{survey_title.dropdown2}}<span class="form-required">*</span> </label>
+            <div id="cid_39" class="form-input jf-required"> <select class="form-dropdown validate[required]" id="input_39" name="dropdown2" style="width:460px" data-component="dropdown" required="" aria-label="Введите вопрос">
+              {% for i in option2 %}   
+              <option value="{{ i.id }}">{{ i.option }}</option>
+              {% endfor %}
+              </select> </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_dropdown" id="id_37"><label class="form-label form-label-left form-label-auto" id="label_37" for="input_37"> {{survey_title.dropdown3}}<span class="form-required">*</span> </label>
+            <div id="cid_37" class="form-input jf-required"> <select class="form-dropdown validate[required]" id="input_37" name="dropdown3" style="width:460px" data-component="dropdown" required="" aria-label="Введите вопрос">
+              {% for i in option3 %}   
+              <option value="{{ i.id }}">{{ i.option }}</option>
+              {%endfor%}
+              </select> </div>
+          </li>
+          <li class="form-line jf-required" data-type="control_dropdown" id="id_5"><label class="form-label form-label-left form-label-auto" id="label_5" for="input_5">{{survey_title.dropdown4}}<span class="form-required">*</span> </label>
+            <div id="cid_5" class="form-input jf-required"> <select class="form-dropdown validate[required]" id="input_5" name="dropdown4" style="width:460px" data-component="dropdown" required="" aria-label="Menú desplegable">
+              {% for i in option4 %}   
+              <option value="{{ i.id }}">{{ i.option }}</option>
+              {%endfor%}
+              </select> </div>
+          </li>
+          <li id="cid_40" class="form-input-wide" data-type="control_head">
+            <div class="form-header-group  header-default">
+              <div class="header-text httal htvam">
+                <h2 id="header_40" class="form-header" data-component="header">{{survey_title.checkboxtitle1}}</h2>
+              </div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_radio" id="id_41"><label class="form-label form-label-left form-label-auto" id="label_41" for="input_41"> </label>
+            <div id="cid_41" class="form-input">
+              
+              <div class="formControl">
+                <label for="chc2">{{survey_title.checkbox1}}</label>
+                <input type="checkbox" name="select1" id="chc2">
+               </div>
+            </div>
+          </li>
+
+
+          <li class="form-line jf-required" data-type="control_textbox" id="id_42"><label class="form-label form-label-left form-label-auto" id="label_42" for="input_42"> {{survey_title.input2}}<span class="form-required">*</span> </label>
+            <div id="cid_42" class="form-input jf-required"> <input type="text" id="input_42" name="textbox2" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="20" value="" placeholder=" " data-component="textbox" aria-labelledby="label_42" required="" /> </div>
+          </li>
+
+
+
+          <li id="cid_43" class="form-input-wide" data-type="control_head">
+            <div class="form-header-group  header-default">
+              <div class="header-text httal htvam">
+                <h2 id="header_43" class="form-header" data-component="header">{{survey_title.checkboxtitle2}}</h2>
+              </div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_radio" id="id_44"><label class="form-label form-label-left form-label-auto" id="label_44" for="input_44"> </label>
+            <div id="cid_44" class="form-input">
+              <div class="formControl">
+                <label for="chc2">{{survey_title.checkbox2}}</label>
+                <input type="checkbox" name="select2" id="chc2">
+               </div>
+            </div>
+          </li>
+
+          <li id="cid_45" class="form-input-wide" data-type="control_head">
+            <div class="form-header-group  header-default">
+              <div class="header-text httal htvam">
+                <h2 id="header_45" class="form-header" data-component="header">{{survey_title.presentertitle}}</h2>
+              </div>
+            </div>
+          </li>
+     
+        </div>
+
+
+
+
+    <!-----------add row--------------------------->
+ <div class="forming">
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="dropdown5_id">{{survey_title.presnterdropdown}}</label>
+            <select class="form-control" id="dropdown5_id" name="dropdown5_id[]">
+               
+              {% for option in option5 %}
+                <option value="{{ option.id }}">{{ option.option }}</option>
+              {% endfor %}
+            </select>
+        </div>
+      <!-- <div class="col-md-4 mb-3">
+        <label for="dropdown5_id">Dropdown5 ID</label>
+        <input type="text" class="form-control" id="dropdown5_id" name="dropdown5_id[]" required>
+      </div> -->
+      <div class="col-md-4 mb-3">
+        <label for="lastname">{{survey_title.lastnametitle}}</label>
+        <input type="text" class="form-control" id="lastname" name="lastname[]" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="firstname">{{survey_title.firstnametitle}}</label>
+        <input type="text" class="form-control" id="firstname" name="firstname[]" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="firstname_init">{{survey_title.firstnameInititle}}</label>
+        <input type="text" class="form-control" id="firstname_init" name="firstname_init[]" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="email">{{survey_title.emailtitle}}</label>
+        <input type="email" class="form-control" id="email" name="email[]" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="affiliation">{{survey_title.affiliationtitle}}</label>
+        <input type="text" class="form-control" id="affiliation" name="affiliation[]" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+       
+
+
+        <label for="city"> {{survey_title.citytitle}}</label>
+        <input type="text" class="form-control" id="city" name="city[]" required>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="country">{{survey_title.countrytitle}}</label>
+        <input type="text" class="form-control" id="country" name="country[]" required>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary lest" onclick="addRow()">{{survey_title.buttontitle}}</button>
+    <table id="myTable" style="display: none;">
+      <thead>
+        <tr>
+            <th>{{survey_title.presnterdropdown}}</th>
+            <th>{{survey_title.lastnametitle}}</th>
+            <th>{{survey_title.firstnametitle}}</th>
+            <th>{{survey_title.firstnameInititle}}</th>
+            <th>{{survey_title.emailtitle}}</th>
+            <th>{{survey_title.affiliationtitle}}</th>
+            <th>{{survey_title.citytitle}}</th>
+            <th>{{survey_title.countrytitle}}</th>
+            <th>Fəaliyyət</th>
+        </tr>
+      </thead>
+      <tbody id="myTableBody">
+      </tbody>
+    </table>
+  </div>
+    <!---------------------End of Table---------------->
+
+
+    <div class="container">
+        <div class="previewForm">
+            <div class="formControl"> 
+              
+        
+              
+          
+              
+              
+       
+             <label for="background">{{survey_title.textinput1}}</label>
+             <br>
+            <textarea name="background" id="background" cols="100" rows="5"></textarea>
+            </div>
+            <div class="formControl">
+              <label for="methods"> {{survey_title.textinput2}}</label>
+              <br>
+             <textarea name="method" id="methods" cols="100" rows="5"></textarea>
+             </div>
+             <div class="formControl">
+              <label for="results">{{survey_title.textinput3}}</label>
+              <br>
+             <textarea name="result" id="results" cols="100" rows="5"></textarea>
+             </div>
+             <div class="formControl">
+              <label for="conclusions">{{survey_title.textinput4}}</label>
+              <br>
+             <textarea name="conclusion" id="conclusions" cols="100" rows="5"></textarea>
+             </div>
+             <div class="formControl">
+              <label for="figure1">{{survey_title.file1}}*</label><br>
+              <input type="file" name="file1" id="figure1" required>
+             </div>
+             <div class="formControl">
+              <label for="figure2">{{survey_title.file2}}</label><br>
+              <input type="file" name="file2" id="figure2">
+             </div>
+             <div class="formControl">
+              <label for="figure3">{{survey_title.file3}}</label><br>
+              <input type="file" name="file3" id="figure3">
+             </div>
+             <div class="keyword-inputs">
+              <div class="formControl">
+                <div class="col-3">
+                <label for="select1">{{survey_title.selectdropdown1}}</label>
+                </div>
+                <div class="col-9">
+                  <select name="dropdown6" id="select1">
+                    {% for i in selectoption1 %}
+                    <option value="{{ i.id }}">{{ i.option }}</option>
+                     {% endfor %}
+
+                  </select>
+                </div>
+                
+               </div>
+             </div>
+             
+             <div class="keyword-inputs">
+              <div class="formControl">
+                <div class="col-3">
+                  <label for="select2">{{survey_title.selectdropdown2}}</label>
+                  </div>
+                  <div class="col-9">
+                    <select name="dropdown7" id="select2">
+                      {% for i in selectoption2 %}
+                      <option value="{{ i.id }}">{{ i.option }}</option>
+                         {% endfor %}
+                    </select>
+                  </div>
+               </div>
+             </div>
+             
+             <div class="keyword-inputs">
+              <div class="formControl">
+                <div class="col-3">
+                  <label for="keyword1">{{survey_title.keywordinput}} </label>
+
+                </div>
+                <div class="col-9">
+                  <input type="text" name="keyword_1" id="keyword1">
+                </div>
+              </div>                            
+             </div>
+             <div class="formControl">
+              <label for="chc1">{{survey_title.lastcheckboxtitle1}}</label>
+              <input type="checkbox" name="checkbox_1" id="chc1">
+             </div>
+             <div class="formControl">
+              <label for="chc2">{{survey_title.lastcheckboxtitle2}}</label>
+              <input type="checkbox" name="checkbox_2" id="chc2">
+             </div>
+             <div class="formControl">
+              <label for="chc3">{{survey_title.lastcheckboxtitle3}}</label>
+              <input type="checkbox" name="checkbox_3" id="chc3">
+             </div>
+             <div  class="previewform-buttons">
+              
+             </div>                            
+    </div>
+  </div>
+
+  <div class="submitbuttons">
+  <button class="btn btn-success" type="submit">Göndər</button>
+  <button type="submit" formaction="{% url 'draft' %}">Qaralama olaraq saxla</button>
+  <a href="{% url 'draft_list'%}">Qaralama siyahısı</a>
+  <button type="submit" formaction="{% url 'preview' %}">Önizləmə</button>
+
+</div>
+</form>
+
+
+  <article class="centeri">
+
+    <section class="allangs">
+        
+    
+
+<div class="cebert">
+  {%for i in xaber %}
+    <section class="resimler getto">
+      <a href="/mainxaberpost/{{i.id}}" class="samka">
+        <img src="{{i.image.url}}" alt="">
+        <span>
+          <h1>{{i.title|truncatewords:7}}</h1>
+          <p>{{i.date}}</p>
+          
+       </span>
+        </a>
+    </section>
+    <hr class="welldone">
+    {%endfor%}
+
+<div class="anketolog">
+
+    <div class="akero">
+
+    <div class="yumrular">
+        <img src="images/Group 188.png" alt="">
+    </div>
+    <span>
+      {%for i in abstract_phone%}
+      <p style="margin: 0;"> <a href="tel:+99412 418 06 18">{{i.number}}</a> </p>
+      {%endfor%}
+    </span>
+
+    </div>
+
+    <hr>
+     
+    <div class="akero">
+
+        <div class="yumrular">
+            <img src="images/Group 202.png" alt="" >
+        </div>
+        <span style="width: 0%;">
+          {% for i in abstract_email %}
+          <a href="mailto:tibbikonsaltinq@gmail.com">{{i.email}}</a>
+          {%endfor%}
+        </span>
+    
+        </div>
+
+
+        <hr>
+
+        <div class="akero">
+
+            <div class="yumrular">
+                <img src="images/Group 10520.png" alt="">
+            </div>
+            <span style="width: 64%;">
+              {%for i in text %}
+                <p style="margin: 0;"> <a href="#">{{i.description}}</a> </p>
+            </span>
+            {%endfor%}
+            </div>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+</article>
+
+</div>
+
+</div>
+
+  <script>
+    function addRow() {
+      const dropdown5_idInput = document.getElementById("dropdown5_id");
+      const lastnameInput = document.getElementById("lastname");
+      const firstnameInput = document.getElementById("firstname");
+      const firstname_initInput = document.getElementById("firstname_init");
+      const emailInput = document.getElementById("email");
+      const affiliationInput = document.getElementById("affiliation");
+      const cityInput = document.getElementById("city");
+      const countryInput = document.getElementById("country");
+  
+      const dropdown5_id = dropdown5_idInput.options[dropdown5_idInput.selectedIndex].value;
+      const lastname = lastnameInput.value;
+      const firstname = firstnameInput.value;
+      const firstname_init = firstname_initInput.value;
+      const email = emailInput.value;
+      const affiliation = affiliationInput.value;
+      const city = cityInput.value;
+      const country = countryInput.value;
+  
+      if (
+        dropdown5_id === '' || lastname === '' || firstname === '' || firstname_init === '' || email === '' || affiliation === '' || city === '' || country === '')
+       {
+        alert("Please fill in all the fields.");
+        return;
+      }
+  
+      const tableBody = document.getElementById("myTableBody");
+      const newRow = tableBody.insertRow();
+  
+      const dropdown5_idCell = newRow.insertCell();
+      dropdown5_idCell.textContent = dropdown5_idInput.options[dropdown5_idInput.selectedIndex].textContent;
+  
+      const lastnameCell = newRow.insertCell();
+      lastnameCell.textContent = lastname;
+  
+      const firstnameCell = newRow.insertCell();
+      firstnameCell.textContent = firstname;
+  
+      const firstname_initCell = newRow.insertCell();
+      firstname_initCell.textContent = firstname_init;
+  
+      const emailCell = newRow.insertCell();
+      emailCell.textContent = email;
+  
+      const affiliationCell = newRow.insertCell();
+      affiliationCell.textContent = affiliation;
+  
+      const cityCell = newRow.insertCell();
+      cityCell.textContent = city;
+  
+      const countryCell = newRow.insertCell();
+      countryCell.textContent = country;
+  
+      const actionCell = newRow.insertCell();
+      const deleteButton = document.createElement("button");
+      deleteButton.className = "btn btn-danger";
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener("click", function () {
+        const currentRow = this.parentNode.parentNode;
+        tableBody.removeChild(currentRow);
+        if (tableBody.rows.length === 0) {
+          document.getElementById("myTable").style.display = "none";
+        }
+      });
+  
+      actionCell.appendChild(deleteButton);
+  
+      // Create hidden inputs to submit table values
+      const dropdown5_idHidden = document.createElement("input");
+      dropdown5_idHidden.type = "hidden";
+      dropdown5_idHidden.name = "dropdown5_id[]";
+      dropdown5_idHidden.value = dropdown5_id;
+      newRow.appendChild(dropdown5_idHidden);
+  
+      const lastnameHidden = document.createElement("input");
+      lastnameHidden.type = "hidden";
+      lastnameHidden.name = "lastname[]";
+      lastnameHidden.value = lastname;
+      newRow.appendChild(lastnameHidden);
+  
+      const firstnameHidden = document.createElement("input");
+      firstnameHidden.type = "hidden";
+      firstnameHidden.name = "firstname[]";
+      firstnameHidden.value = firstname;
+      newRow.appendChild(firstnameHidden);
+  
+      const firstname_initHidden = document.createElement("input");
+      firstname_initHidden.type = "hidden";
+      firstname_initHidden.name = "firstname_init[]";
+      firstname_initHidden.value = firstname_init;
+      newRow.appendChild(firstname_initHidden);
+  
+      const emailHidden = document.createElement("input");
+      emailHidden.type = "hidden";
+      emailHidden.name = "email[]";
+      emailHidden.value = email;
+      newRow.appendChild(emailHidden);
+  
+      const affiliationHidden = document.createElement("input");
+      affiliationHidden.type ="hidden";
+      affiliationHidden.name = "affiliation[]";
+      affiliationHidden.value = affiliation;
+      newRow.appendChild(affiliationHidden);  
+  
+      const cityHidden = document.createElement("input");
+      cityHidden.type = "hidden";
+      cityHidden.name = "city[]";
+      cityHidden.value = city;
+      newRow.appendChild(cityHidden);
+  
+      const countryHidden = document.createElement("input");
+      countryHidden.type = "hidden";
+      countryHidden.name = "country[]";
+      countryHidden.value = country;
+      newRow.appendChild(countryHidden);
+  
+      // Show the table
+      document.getElementById("myTable").style.display = "table";
+    }
+  </script>
+
+</body>
+</html>
+{% endblock %}

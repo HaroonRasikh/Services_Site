@@ -1,0 +1,297 @@
+{%extends 'header.html' %}
+{%block content%}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <title>Abstrakt Anket</title>
+    <link rel="stylesheet" href="{% static 'css/abstrakt.online.css' %}">
+</head>
+<body>
+ 
+       <section class="lastg">
+
+        <span class="words">
+               {% for i in menue|slice:1 %}
+      <a href="{% url 'home' %}">{{i.menue_1}}</a>
+        <i class="fa-solid fa-angle-right"></i>
+        <a href="{%url 'abstract_online' %}">{{i.menue_5}}</a>
+        <i class="fa-solid fa-angle-right"></i>
+        {%endfor%}
+        </span>
+            <hr class="anetr">
+        
+        </section>
+        <section class="ich">
+    
+            <span class="heber">
+                {%for i in menue|slice:1 %}
+
+                <h1 class="asd">{{i.menue_5}}</h1>
+                <h1 class="xbzibit">{{i.menue_17}}</h1>
+
+                {%endfor%}
+            </span>
+    
+            </section>
+
+<article class="centeri">
+
+    <section class="allangs">
+
+            <div class="metinler">
+
+                   <div class="buttonss">
+                        <article class="pasterg">
+
+                                <span class="fiqurcc">
+                                    <div class="uzun"> <a href="{%url 'survey'%}"><p>ONLINE</p> </a> </div>
+                                    <div class="balaca"></div>
+                                </span>
+                                
+                                {%for i in abstract_0 %}
+
+                                <h4>{{i.title}}</h4>
+
+                                <p>{{i.description|safe}}</p>
+
+                                
+                        </article>
+                             {%endfor%}
+                    </div> 
+
+
+
+                    <div class="buttonss">        
+                           <article class="pasterg">
+                                    <h1>{{first.title_name}}</h1>
+                                    
+                                    {%for i in abstract_1 %}
+                                    <h4>{{i.title}}</h4>
+
+                                    <p>{{i.description|safe}}</p>
+
+                                
+                            </article>
+                                     {%endfor%}            
+                    </div> 
+
+
+                    <div class="buttonss">        
+                        <article class="pasterg">
+                                 <h1>{{first_2.title_name}}</h1>
+                                 
+                                 {%for i in abstract_2 %}
+                                 <h4>{{i.title}}</h4>
+
+                                 <p>{{i.description|safe}}</p>
+
+                             
+                         </article>
+                                  {%endfor%}            
+                 </div> 
+
+
+
+                 <div class="buttonss">        
+                    <article class="pasterg">
+                             <h1>{{first_3.title_name}}</h1>
+                             
+                             {%for i in abstract_3 %}
+                             <h4>{{i.title}}</h4>
+
+                             <p>{{i.description|safe}}</p>
+
+                         
+                     </article>
+                              {%endfor%}            
+                 </div> 
+
+
+                 <div class="buttonss">        
+                    <article class="pasterg">
+                             <h1>{{first_4.title_name}}</h1>
+                             
+                             {%for i in abstract_4 %}
+                             <h4>{{i.title}}</h4>
+
+                             <p>{{i.description|safe}}</p>
+
+                         
+                     </article>
+                              {%endfor%}            
+                 </div> 
+
+
+                 
+                 <div class="buttonss">        
+                    <article class="pasterg">
+                             <h1>{{first_5.title_name}}</h1>
+                             
+                             {%for i in abstract_5 %}
+                             <h4>{{i.title}}</h4>
+
+                             <p>{{i.description|safe}}</p>
+
+                         
+                     </article>
+                              {%endfor%}            
+                 </div> 
+
+ 
+                
+
+            </div>
+
+
+        
+ 
+
+<div class="cebert">
+    {%for i in xaber %}
+    <section class="resimler getto">
+       
+        <a href="/mainxaberpost/{{i.id}}" class="samka">
+        <img src="{{i.image.url}}" alt="">
+             <span>
+                <h1>{{i.title|truncatewords:7}}</h1>
+                <p>{{i.date|default:""}}</p>
+                
+             </span>
+        </a>
+        
+    </section>
+    <hr class="welldone">
+    {%endfor%}
+   
+    <!--
+    <section class="resimler">
+        <a href="" class="samka">
+        <img src="images/Rectangle 2471.png" alt="">
+             <span>
+                <h1>Re-evaluating the modal mix for Pharmaceutical supply . . .</h1>
+                <p>12.12.2019</p>
+             </span>
+        </a>
+    </section>
+    <hr class="welldone">
+    <section class="resimler">
+        <a href="" class="samka">
+        <img src="images/Rectangle 2471.png" alt="">
+             <span>
+                <h1>Re-evaluating the modal mix for Pharmaceutical supply . . .</h1>
+                <p>12.12.2019</p>
+             </span>
+        </a>
+    </section>
+    <hr class="welldone">
+    <section class="resimler">
+        <a href="" class="samka">
+        <img src="images/Rectangle 2471.png" alt="">
+             <span>
+                <h1>Re-evaluating the modal mix for Pharmaceutical supply . . .</h1>
+                <p>12.12.2019</p>
+             </span>
+        </a>
+    </section>
+<hr class="welldone">
+<section class="resimler">
+    <a href="" class="samka">
+    <img src="images/Rectangle 2471.png" alt="">
+         <span>
+            <h1>Re-evaluating the modal mix for Pharmaceutical supply . . .</h1>
+            <p>12.12.2019</p>
+         </span>
+    </a>
+</section>
+    <hr class="welldone">
+    <section class="resimler">
+        <a href="" class="samka">
+        <img src="images/Rectangle 2471.png" alt="">
+             <span>
+                <h1>Re-evaluating the modal mix for Pharmaceutical supply . . .</h1>
+                <p>12.12.2019</p>
+             </span>
+        </a>
+    </section>>
+    <hr class="welldone">
+<section class="resimler"> -->
+    <!-- <a href="" class="samka">
+    <img src="images/Rectangle 2471.png" alt="">
+         <span>
+            <h1>Re-evaluating the modal mix for Pharmaceutical supply . . .</h1>
+            <p>12.12.2019</p>
+         </span>
+    </a>
+</section> -->
+
+
+<div class="anketolog">
+
+    <div class="akero">
+
+    <div class="yumrular">
+        <img src="images/Group 188.png" alt="">
+    </div>
+    <span>
+        {%for i in abstract_phone%}
+        <p style="margin: 0;"> <a href="tel:+99412 418 06 18">{{i.number}}</a> </p>
+        {%endfor%}
+    </span>
+
+    </div>
+
+    <hr>
+     
+    <div class="akero">
+
+        <div class="yumrular">
+            <img src="images/Group 202.png" alt="" >
+        </div>
+        <span style="width: 0%;">
+            {% for i in abstract_email %}
+            <a href="mailto:tibbikonsaltinq@gmail.com">{{i.email}}</a>
+         {%endfor%}
+        </span>
+    
+        </div>
+
+
+        <hr>
+
+        <div class="akero">
+
+            <div class="yumrular">
+                <img src="images/Group 10520.png" alt="">
+            </div>
+            <span style="width: 64%;">
+                {% for i in text %}
+                <p style="margin: 0;"> <a href="#">{{i.description}}</a> </p>
+            </span>
+                {%endfor%}
+            </div>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+</article>
+
+ 
+
+
+</body>
+</html>
+{%endblock%}

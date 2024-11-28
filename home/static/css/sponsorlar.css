@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.words{
+    display: flex;
+    align-items: baseline;
+    width: 1072px;
+    flex-direction: row;
+    margin-top: 12px;
+}
+.words > a,i{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.lastg{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+hr{
+    border: 1px solid rgba(157, 158, 159, 0.16);
+    width: 1072px;
+}
+.heber{
+    width: 1072px;
+    display: flex;
+    justify-content: space-between;
+}
+.heber h1{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2E3131;
+}
+.heber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.heber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.gangom{
+    display: flex;
+    margin-top: 36px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.sekillertoplu div{
+    width: 336px;
+    height: 299px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 100px rgba(223, 223, 223, 0.16);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.sekillertoplu img{
+    width: 111px;
+    height: 131px;
+    margin-top: 40px;
+    display: flex;
+    align-self: center;
+}
+.sekillertoplu{
+    display: flex;
+    margin-top: 32px;
+    width: 1072px;
+    grid-gap: 32px;
+    flex-wrap: wrap;
+}
+.sekillertoplu p{
+    text-align: center;
+    margin: 16px 14px 0 14px;
+    color: rgba(46, 49, 49, 0.6);
+    opacity: 85%;
+}
+.btnm{
+    width: 164px;
+    height: 52px;
+    background: #1F4586;
+    border: 1px solid #1F4586;
+    border-radius: 4px;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnm:hover{
+    background-color: #2b5192;
+}
+.paster{
+    display: flex;
+    justify-content: center;
+    width: 1136px;
+    background-color: #F4F4F4;
+    height: 460px;
+}
+.xperti{
+    width: 1072px;
+}
+form input{
+    margin: -5px 24px 7px 0;
+    width: 522px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #E4E8EE;
+    border-radius: 4px;
+    padding: 0 0 0 16px;
+}
+.formn{
+    height: 432px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 24px;
+}
+.gondermek{
+    width: 164px;
+    height: 52px;
+    background: #1F4586;
+    border: 1px solid #1F4586;
+    color: white;
+}
+
+
+select{
+    word-wrap: normal;
+    border: none;
+    background: #1F4586;
+    color: white;
+}

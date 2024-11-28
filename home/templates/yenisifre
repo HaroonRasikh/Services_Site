@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>Enter new password | Django site admin</title>
+<link rel="stylesheet" href="/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">
+
+
+<link rel="stylesheet" href="/static/admin/css/forms.css">
+
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=""
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">Admın Pannel</a></h1>
+
+        </div>
+        
+        
+        
+        
+    </div>
+    
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/admin/">Home</a>
+&rsaquo; Password reset confirmation
+</div>
+
+    
+
+    <div class="main" id="main">
+      
+      <div class="content">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Yeni parol daxil edin</h1>
+          
+          
+
+
+
+<p>Lütfən, yeni parolunuzu iki dəfə daxil edin ki, onu düzgün daxil etdiyinizi yoxlayaq.</p>
+
+<form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="Zi8aXeoy3nmxXUYDyuZK93dsvD4QUejUxEWIc68QSWHmzypCSi8BJL7ktI7I6dm8" action ="password_reset_confirm">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Change my password">
+</fieldset>
+</form>
+
+
+
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+<script src="{% static 'js/new.password.js' %}"></script>
+ 
+</body>
+</html>

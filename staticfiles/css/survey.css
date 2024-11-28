@@ -1,0 +1,336 @@
+.heber{
+    width: 893px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.heber .asd{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 18px;
+    color: #2E3131;
+}
+.heber .xbzibit{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2E3131;
+    padding-right: 4.5rem;
+}
+.heber i{
+    width: 14px;
+    height: 24px;
+    margin-inline: 10px 0;
+}
+.ich a{
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+.heber a{
+    text-decoration: none;
+    color: #2E3131;
+}
+.ich{
+    display: flex;
+    justify-content: center;
+}
+.empty{
+    display: flex;
+    justify-content: space-between;
+    width: 1072px;
+}
+.firstempty{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#myForm{
+    width: 704px;
+}
+#input_3{
+    width: 610px;
+}
+li{
+    display: contents;
+}
+.form-section{
+    padding: 0;
+}
+.centeri{
+    width: 336px;
+    height: 1179px;
+}
+.allangs{
+    display: flex;
+    justify-content: center;
+}
+.resimler{
+    display: flex;
+    margin: 25px 0  0 0;
+}
+.resimler span{
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+}
+.resimler img{
+    width: 72px;
+    height: 72px;
+}
+.resimler h1{
+    font-family: 'Montserrat' sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16.5px;
+line-height: 24px;
+color: rgba(46, 49, 49, 0.78);
+margin-bottom: 4px;
+}
+.resimler p{
+    opacity: 0.7;
+}
+.samka{
+    display: flex;
+    text-decoration: none;
+}
+.samka p{
+    display: flex;
+    text-decoration: none;
+    opacity: 0.7;
+    color: black;
+}
+.welldone{
+    margin-top: 3px;
+    margin-left: 32px;
+}
+.anketolog{
+    width: 336px;
+height: 321px;
+background: #1F4586;
+border-radius: 4px;
+margin-left: 2rem;
+    margin-top: 13px;
+    padding: 75px 25px;
+
+}
+.anketolog hr{
+    color: white;
+}
+.anketolog a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Work Sans', sans-serif;
+}
+.akero{
+    display: flex;
+    align-items: center;
+    
+}
+.yumrular{
+    width: 48px;
+    height: 48px;
+    background-color: #82BD3F;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+}
+.yumrular span{
+    width: 0%;
+    margin-left: 20px;
+}
+
+.form-header-group{
+    margin: 20px 0 40px 0;
+}
+.form-label-left{
+    margin: 20px 0;
+    font-family: 'poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 540;
+    width: 11rem;
+}
+.jf-required{
+    /* display: block; */
+}
+#input_42{
+    width: 610px;
+}
+.forming{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    width: 1072px;
+    justify-content: space-between;
+}
+.forming input{
+    width: 200px;
+}
+.col-md-4 label{
+    width: 120px;
+    margin-bottom: 15px;
+}
+.lest{
+    height: 50px;
+    margin-top: 35px;
+}
+.container{
+    margin-left: 100px;
+    margin-top: 30px;
+    display: flex;
+}
+.submitbuttons{
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+}
+.submitbuttons button{
+    /* width: 116px; */
+    height: 36px;
+    margin: 0 10px;
+    color: white;
+    background-color: #18ba6f;
+    border-radius: 10px;
+    padding: 0 12px;
+}
+.submitbuttons a{
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+    border: 1px solid;
+    padding: 6px 18px;
+    display: flex;
+    background-color: #18ba6f;
+    border-radius: 10px;
+}
+.formControl{
+    margin: 20px 0;
+}
+.back{
+    height: 34px;
+    padding: 0 15px;
+    background-color: #1F4586;
+    color: white;
+    margin-top: 29px;
+    margin-right: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'poppins',sans-serif;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.profil{
+    height: 34px;
+    padding: 0 15px;
+    background-color: #1F4586;
+    color: white;
+    margin: 28px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'poppins',sans-serif;
+    border-radius: 10px;
+}
+@media only screen and (max-width:1134px){
+    .empty, .firstempty{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .ich{
+        flex-wrap: wrap;
+    grid-gap: 0 25px;
+    align-items: end;
+    }
+    #myForm{
+        width: 95%;
+        margin:  13px;
+    }
+    .previewForm{
+        width: 100%;
+    }
+    .forming{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    table{
+        width: 100%;
+        font-size: 12px;
+    }
+    .forming input{
+      margin: 0;
+      width: 100%;
+    }
+    .heber .xbzibit{
+        display: none;
+    }
+    .heber{
+        width: 13%;
+    }
+    .form-control, .col-md-4 label{
+        margin: 10px;
+        width: 100%;
+    }
+    .jf-required, textarea{
+        width: 100%;
+        height: 100%;
+    }
+    #input_3, #input_42{
+        width: 100%!important;
+    }
+    .form-section{
+        width: 100%;
+        text-align: center;
+    }
+    .container{
+        margin: 30px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .submitbuttons{
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .cebert{
+        width: 100%;
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+    .getto, .pasterg, .welldone, .centeri{
+
+margin: 0 20px;
+
+height: 100%;
+
+width: 100%;
+}
+    .heber{
+        text-align: center;
+        display: contents;
+    }
+    .getto{
+        margin: 57px 0  0 20px;
+        display: flex;
+    }
+    .anketolog{/* width: 100%; */height: 100%;margin: 45px 0 0 0;display: flex;flex-direction: column;justify-content: center;}
+    select{
+        width: 100%!important;
+    }
+    .heber .asd{
+        margin-top: 0;
+    }
+    
+}

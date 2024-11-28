@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Preview</title>
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+
+      .title {
+        font-weight: bold;
+        margin: 0;
+        color: #25a6aa;
+      }
+      @media (min-width: 991px) {
+        .previewFormat {
+          width: 700px;
+        }
+      }
+      .rowe h2,span{
+    color: #25a6aa;
+}
+    </style>
+  </head>
+  <body style="margin: 0">
+    <div id="previewData" class="previewFormat">
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.input1}}</p>
+          <p>{{survey.textbox1}}</p>
+        </div>
+      </div> 
+
+
+
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title"> {{survey_title.dropdown1}}</p>
+          <p>{{ survey.dropdown_1 }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.dropdown2}}</p>
+          <p>{{ survey.dropdown_2 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.dropdown3}}</p>
+          <p>{{ survey.dropdown_3 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.dropdown4}}</p>
+          <p>{{ survey.dropdown_4 }}</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.checkbox1}}</p>
+          <p>{{ survey.select1 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.input2}}</p>
+          <p>{{ survey.textbox2 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.checkbox2}}</p>
+          <p>{{ survey.select2 }}</p>
+        </div>
+      </div>
+                
+      
+      
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.presnterdropdown}}</p>
+          <p>{{ survey.dropdown_5 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title" style="color:#478C8E">{{survey_title.lastnametitle}}</p>
+          <p>{{ survey.lastname }}</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.firstnametitle}}</p>
+          <p>{{ survey.name }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.firstnameInititle}}</p>
+          <p>{{ survey.first_name_init}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.emailtitle}}</p>
+          <p>{{ survey.email }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.affiliationtitle}}</p>
+          <p>{{ survey.affilation }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.citytitle}}</p>
+          <p>{{ survey.city }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.countrytitle}}</p>
+          <p>{{ survey.country }}</p>
+        </div>
+      </div>
+
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput1}}</p>
+          <p>{{ survey.background }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput2}}</p>
+          <p>{{ survey.method }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput3}}</p>
+          <p>{{ survey.result }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.textinput4}}</p>
+          <p>{{ survey.conclusion }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.file1}}</p>
+          <p>{{ survey.file_1 }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.file2}}</p>
+          <p>{{ survey.file_2 }}</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.file3}}</p>
+          <p>{{ survey.file_3 }}</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.selectdropdown1}}</p>
+          <p>{{ survey.selectbox_1}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.selectdropdown2}}</p>
+          <p>{{ survey.selectbox_2 }}</p>
+        </div>
+      </div>
+
+
+       <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.keywordinput}}</p>
+          <p>{{ survey.keyword_1 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.lastcheckboxtitle1}}</p>
+          <p>{{ survey.checkbox_1 }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.lastcheckboxtitle2}}</p>
+          <p>{{ survey.checkbox_2 }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="title">{{survey_title.lastcheckboxtitle3}}</p>
+          <p>{{ survey.checkbox_3 }}</p>
+        </div>
+      </div>
+      
+
+      <div class="row rowe">
+        <div class="col-md-12">
+ 
+          <p class="title"><h2>Əlavə aparıcı</h2></p>
+          {% if form_data %}
+          {% for location in form_data %}
+          <h3> <span>Aparıcı:</span>  {{ forloop.counter }}</h3>
+          <p><span>{{survey_title.lastnametitle}}:</span>  {{ location.lastname }}</p>
+          <p> <span>{{survey_title.firstnametitle}}:</span> {{ location.name }}</p>
+          <p> <span>{{survey_title.firstnameInititle}}:</span> {{ location.first_name_init }}</p>
+          <p> <span>{{survey_title.emailtitle}}:</span> {{ location.email }}</p>
+          <p> <span>{{survey_title.affiliationtitle}}:</span> {{ location.affilation }}</p>
+          <p> <span>{{survey_title.citytitle}}: </span>{{ location.city }}</p>
+          <p><span>{{survey_title.countrytitle}}:</span> {{ location.country }}</p>
+          <p> <span>{{survey_title.presnterdropdown}}:</span> {{ location.dropdown_5 }}</p>
+       {% endfor %}
+          {% else %}
+      <p>Əlavə müəllif təqdim olunmayıb.</p>
+         {% endif %}
+        </div>
+      </div>
+      
+  </div>
+ 
+ 
+
+
+
+
+
+ 
+
+
